@@ -7,7 +7,7 @@ _____________________________________
 ## 1. CALCULATOR
 
 ### This project is made using three concepts - Ternaries, Switch-Cases and If-Else statements.
-### The calculator solves te following, mentioned along with the calling characters:
+### The calculator operates the following, mentioned along with the calling characters:
 
 #### a. Sum - '+'
 #### b. Product - '*'
@@ -17,4 +17,10 @@ _____________________________________
 #### f. Simple Interest - 's'
 #### g. Multiplication of Matrices - 'X'
 #### h. Profit/Loss - '!'
+
+_____________________________________ 
+
+## 2. UNIT CONVERTER
+
+
 
