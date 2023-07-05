@@ -2,7 +2,10 @@
 This folder contains all the projects made in
 language C. README contains summary information
 of all the projects in seperate folders.
-** _____________________ **
+
+
+
+_____________________________________ 
 
 1. CALCULATOR
 This project is made using three concepts - Ternaries, 
