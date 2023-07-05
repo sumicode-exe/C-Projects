@@ -62,8 +62,10 @@ int Temperature(int C, int F, int K)
     int val1;
     int val2;
     printf("You want to convert a unit of Temperature");
-    scanf("Enter what you want to convert FROM: %c\n", &val1);
-    scanf("Enter what you want to convert TO: %c\n", &val2);
+    printf("Enter what you want to convert FROM:\n");
+    scanf("%c\n", &val1);
+    printf("Enter what you want to convert TO:\n");
+    scanf("%c\n", &val2);
 }
 
 int Distance(int cm, int mm, int km)
