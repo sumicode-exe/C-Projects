@@ -10,12 +10,23 @@ int main()
 {
 
     char ch;
-    double a, b, p, r, t, sp, cp, CI, i, pr, ls, pp, lp;
+    double a, b, p, r, t, sp, cp, CI, i, pr, ls, pp, lp, X;
+    // variables declaration for matrix multiplication
+    int row1;
+    int column1;
+
+    int row2;
+    int column2;
+
+    int l, m, n;
+    int matrix1[10][10];
+    int matrix2[10][10];
+    int result[10][10];
 
     while (1)
     {
 
-        printf("Enter and operator (+, -, *, /, !, c, s), \n "
+        printf("Enter and operator (+, -, *, /, !, c, s, X), \n "
                "If you want to exit, press x: ");
         scanf("%c", &ch);
 
@@ -59,6 +70,64 @@ int main()
             printf("Enter the first two operators: ");
             scanf("%lf %lf", &a, &b);
             printf("%.1lf / %.1lf = %.1lf\n", a, b, a / b);
+        }
+
+        else if (ch == 'X')
+        {
+
+            printf("Enter the dimensions of the matrix 1: \n");
+            scanf("%d \n %d", &row1, &column1);
+
+            printf("Enter the dimensions of the matrix 2: \n");
+            scanf("%d \n %d", &row2, &column2);
+
+            if (column1 != row2)
+            {
+                printf("Invalid dimensions \n");
+            }
+            else
+            {
+                for (l = 0; l < row1; l++)
+                {
+                    for (m = 0; m < column1; m++)
+                    {
+                        printf("Enter the elements of Matrix A: [%d][%d] \n", l, m);
+                        scanf("%d", &matrix1[l][m]);
+                    }
+                }
+                printf("Enter the elements of Matrix-B:\n");
+                for (l = 0; l < row2; l++)
+                {
+                    for (m = 0; m < column2; m++)
+                    {
+                        printf("Enter the elements of Matrix B: [%d][%d] \n", l, m);
+                        scanf("%d", &matrix2[l][m]);
+                    }
+                }
+                for (l = 0; l < row1; l++)
+                {
+                    for (m = 0; m < column2; m++)
+                    {
+                        result[l][m] = 0;
+                        for (n = 0; n < row2; n++)
+                        {
+                            result[l][m] += matrix1[l][n] * matrix2[n][m];
+                        }
+                    }
+                }
+                printf("The product of the two matrices is:-\n");
+
+                for (l = 0; l < row1; l++)
+                {
+                    for (m = 0; m < column2; m++)
+                    {
+                        printf("%d\t", result[l][m]);
+                    }
+                    printf("\n");
+                }
+
+                break;
+            }
         }
 
         else if (ch == '!')
