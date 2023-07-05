@@ -20,18 +20,18 @@ int main()
     int wt, kw, js;
     int unit;
 
-    printf("This calculator converts units: \n");
-    printf("of Temperature(t): \n Celcius(C)\n Farhenheit(F)\n Kelvin(k)\n");
-    printf("of Distance(d): \n CentiMeter(cm)\n MilliMeter(mm)\n KiloMeter(km)\n");
-    printf("of Volume(v): \n Litre(l)\n MilliLitre(ml)\n KiloLitre(kl)\n");
-    printf("of Time(tm): \n MilliSeconds(ms)\n Seconds(sec)\n Minutes(min)\n Hours(hrs)\n");
-    printf("of Weight(w): \n CentiGram(cg)\n MilliGram(mg)\n KiloGram(kg)\n");
-    printf("of Power(p): \n Watt(wt)\n kiloWatt(kw)\n Joules(js)\n");
+    // printf("This calculator converts units: \n");
+    // printf("of Temperature(T): \n Celcius(C)\n Farhenheit(F)\n Kelvin(k)\n");
+    // printf("of Distance(d): \n CentiMeter(cm)\n MilliMeter(mm)\n KiloMeter(km)\n");
+    // printf("of Volume(v): \n Litre(l)\n MilliLitre(ml)\n KiloLitre(kl)\n");
+    // printf("of Time(tm): \n MilliSeconds(ms)\n Seconds(sec)\n Minutes(min)\n Hours(hrs)\n");
+    // printf("of Weight(w): \n CentiGram(cg)\n MilliGram(mg)\n KiloGram(kg)\n");
+    // printf("of Power(p): \n Watt(wt)\n kiloWatt(kw)\n Joules(js)\n");
 
     printf("Enter what do you want to convert: \n");
     scanf("%c", &unit);
 
-    if (unit == 't')
+    if (unit == 'T')
     {
         Temperature(C, F, K);
     }
@@ -43,7 +43,7 @@ int main()
     {
         Volume(l, ml, kl);
     }
-    else if (unit == 'tm')
+    else if (unit == 't')
     {
         Time(ms, sec, hrs, min);
     }
@@ -59,6 +59,11 @@ int main()
 
 int Temperature(int C, int F, int K)
 {
+    int val1;
+    int val2;
+    printf("You want to convert a unit of Temperature");
+    scanf("Enter what you want to convert FROM: %c\n", &val1);
+    scanf("Enter what you want to convert TO: %c\n", &val2);
 }
 
 int Distance(int cm, int mm, int km)
