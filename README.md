@@ -1,6 +1,5 @@
 # PROJECTS IN C
-## This folder contains all the projects made in language C. README contains summary information
-of all the projects in seperate folders.
+## This folder contains all the projects made in language C. README contains summary information #of all the projects in seperate folders.
 
 _____________________________________ 
 
@@ -12,9 +11,9 @@ _____________________________________
 #### a. Sum - '+'
 #### b. Product - '*'
 #### c. Difference - '-'
-d. Dividend - '/'
-e. Compund Interest - 'c'
-f. Simple Interest - 's'
-g. Multiplication of Matrices - 'X'
-h. Profit/Loss - '!'
+#### d. Dividend - '/'
+#### e. Compund Interest - 'c'
+#### f. Simple Interest - 's'
+#### g. Multiplication of Matrices - 'X'
+#### h. Profit/Loss - '!'
 
