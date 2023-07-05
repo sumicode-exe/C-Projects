@@ -1,5 +1,6 @@
 # PROJECTS IN C
-## This folder contains all the projects made in language C. README contains summary information #of all the projects in seperate folders.
+### This folder contains all the projects made in language C. R
+### README contains summary information of all the projects in seperate folders.
 
 _____________________________________ 
 
