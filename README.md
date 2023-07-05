@@ -17,3 +17,4 @@ Compund Interest - 'c'
 Simple Interest - 's'
 Multiplication of Matrices - 'X'
 Profit/Loss - '!'
+
