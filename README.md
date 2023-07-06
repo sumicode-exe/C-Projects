@@ -9,14 +9,14 @@ _____________________________________
 ### This project is made using three concepts - Ternaries, Switch-Cases and If-Else statements.
 ### The calculator operates the following, mentioned along with the calling characters:
 
-#### a. Sum - '+'
-#### b. Product - '*'
-#### c. Difference - '-'
-#### d. Dividend - '/'
-#### e. Compund Interest - 'c'
-#### f. Simple Interest - 's'
-#### g. Multiplication of Matrices - 'X'
-#### h. Profit/Loss - '!'
+| #### a. Sum - '+'         |  #### e. Compund Interest - 'c'         |
+------------------------    | ------------------------
+| #### b. Product - '*'     | #### f. Simple Interest - 's'           |
+------------------------    | ------------------------
+| #### c. Difference - '-'  | #### g. Multiplication of Matrices - 'X'|
+------------------------    | ------------------------
+| #### d. Dividend - '/'    | #### h. Profit/Loss - '!'               |
+------------------------    | ------------------------
 
 _____________________________________ 
 
