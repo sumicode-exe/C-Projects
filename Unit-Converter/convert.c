@@ -7,7 +7,7 @@ int Distance();
 int Volume();
 int Time();
 int Weight();
-int Power();
+//int Power();
 
 int main()
 {
