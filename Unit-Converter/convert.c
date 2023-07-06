@@ -133,14 +133,40 @@ int Volume() {
     printf("Enter 'm for mililitres");
     printf("Enter 'k for kilolitres");
 
-    (from == 'c' && to == 'm') ? printf("Answer is %lf MilliMeters", val / 10 ) : 
-    (from == 'm' && to == 'c') ? printf("Answer is %lf CentiMeters", val * 10) :
-    (from == 'c' && to == 'k') ? printf("Answer if %lf KiloMeters", val * 100000) : 
-    (from == 'k' && to == 'c') ? printf("Answer is %lf CentiMeters", val / 100000) : 
-    (from == 'm' && to == 'k') ? printf("Anser is %lf KiloMeters", val  * 1000000) : 
-    (from == 'k' && to == 'm') ? printf("Answer is %lf  MilliMeters", val / 1000000) : 
+    (from == 'l' && to == 'k') ? printf("Answer is %lf kilolitre", val / 1000) : 
+    (from == 'k' && to == 'l') ? printf("Answer is %lf litre", val * 1000) :
+    (from == 'l' && to == 'm') ? printf("Answer if %lf milielitre", val * 10000) : 
+    (from == 'm' && to == 'l') ? printf("Answer is %lf litre", val / 10000) : 
+    (from == 'k' && to == 'm') ? printf("Anser is %lf milielitre", val  * 1000000) : 
+    (from == 'm' && to == 'k') ? printf("Answer is %lf  kilolitre", val / 1000000) : 
     printf("Please enter valid conversion units");
 }
-int Time() {}
+int Time() {
+    char from, to;
+    double val;
+
+    printf("Enter what you want to convert from: \n");
+    scanf(" %c", &from);
+
+    printf("Enter what you want to convert to: \n");
+    scanf(" %c", &to);
+
+    printf("Enter the numerical value of conversion: \n");
+    scanf("%lf", &val);
+
+    printf("Enter 'd' for weeks");
+    printf("Enter 'w' for days");
+    printf("Enter 'h' for hours");
+    printf("Enter 'm' for minutes");
+    printf("Enter 's' for seconds");
+
+    (from == 'l' && to == 'k') ? printf("Answer is %lf kilolitre", val / 1000) : 
+    (from == 'k' && to == 'l') ? printf("Answer is %lf litre", val * 1000) :
+    (from == 'l' && to == 'm') ? printf("Answer if %lf milielitre", val * 10000) : 
+    (from == 'm' && to == 'l') ? printf("Answer is %lf litre", val / 10000) : 
+    (from == 'k' && to == 'm') ? printf("Anser is %lf milielitre", val  * 1000000) : 
+    (from == 'm' && to == 'k') ? printf("Answer is %lf  kilolitre", val / 1000000) : 
+    printf("Please enter valid conversion units");
+}
 int Weight() {}
 //int Power() {}
