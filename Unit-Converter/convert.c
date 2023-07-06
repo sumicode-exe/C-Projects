@@ -74,7 +74,8 @@ int Temperature(int C, int F, int K)
     printf("Enter the numerical value of conversion: \n");
     scanf("%lf", &val);
 
-    (from == 'C' && to == 'F') ? printf("Answer is %lf Farhenheit", val * (9.0 / 5) + 32) : (from == 'F' && to == 'C') ? printf("Answer is %lf Celcius", (val - 32) * (5.0 / 9)):printf("hellp");
+    (from == 'C' && to == 'F') ? printf("Answer is %lf Farhenheit", val * (9.0 / 5) + 32) : (from == 'F' && to == 'C') ? printf("Answer is %lf Celcius", (val - 32) * (5.0 / 9))
+                                                                                                                       : printf("hellp");
 }
 
 int Distance(int cm, int mm, int km) {}
