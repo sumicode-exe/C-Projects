@@ -64,11 +64,9 @@ int main()
 
 int Temperature()
 {
-
-    char from, to;
-    double val;
-   
-
+  
+char from, to;
+ double val;
     printf("Enter what you want to convert from: \n");
     scanf(" %c", &from);
 
@@ -92,26 +90,32 @@ int Temperature()
 int Distance() {
     
 
-    char from[40], to[40];
+    char from, to;
     double val;
 
-    
-    printf("Enter what you want to convert from: ");
-    fgets(from, 40, stdin);
-   
+    printf("Enter what you want to convert from: \n");
+    scanf(" %c", &from);
+
     printf("Enter what you want to convert to: \n");
-    fgets(to, 40, stdin);
+    scanf(" %c", &to);
 
     printf("Enter the numerical value of conversion: \n");
     scanf("%lf", &val);
-    
-    (strcmp(from, "cm") == 0 && strcmp(to, "mm") == 0) ? printf("Answer is %lf MilliMeters", val / 10 ) : 
-    (strcmp(from, "mm") == 0 && strcmp(to, "cm") == 0) ? printf("Answer is %lf CentiMeters", val * 10) :
-    (strcmp(from, "cm") == 0 && strcmp(to, "km") == 0) ? printf("Answer if %lf KiloMeters", val * 100000) : 
-    (strcmp(from, "km") == 0 && strcmp(to, "cm") == 0) ? printf("Answer is %lf CentiMeters", val / 100000) : 
-    (strcmp(from, "mm") == 0 && strcmp(to, "km") == 0) ? printf("Anser is %lf KiloMeters", val  * 1000000) : 
-    (strcmp(from, "km") == 0 && strcmp(to, "mm") == 0) ? printf("Answer is %lf  MilliMeters", val / 1000000) : 
+
+    printf("Enter 'c' for centimeters");
+    printf("Enter 'm for milimeters");
+    printf("Enter 'k for kilometers");
+
+    (from == 'c' && to == 'm') ? printf("Answer is %lf MilliMeters", val / 10 ) : 
+    (from == 'm' && to == 'c') ? printf("Answer is %lf CentiMeters", val * 10) :
+    (from == 'c' && to == 'k') ? printf("Answer if %lf KiloMeters", val * 100000) : 
+    (from == 'k' && to == 'c') ? printf("Answer is %lf CentiMeters", val / 100000) : 
+    (from == 'm' && to == 'k') ? printf("Anser is %lf KiloMeters", val  * 1000000) : 
+    (from == 'k' && to == 'm') ? printf("Answer is %lf  MilliMeters", val / 1000000) : 
     printf("Please enter valid conversion units");
+    
+
+
 }
 int Volume() {}
 int Time() {}
