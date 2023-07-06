@@ -27,17 +27,17 @@ _____________________________________
 ### It then categorises the scale within each:
  
   #### 1. Time (t)
-   ##### a. 'w' for weeks 
-   ##### b. 'd' for days 
-   ##### c. 'h' for hours
-   ##### d. 'm' for minutes
-   ##### e. 's' for seconds
+   ##### - 'w' for weeks 
+   ##### - 'd' for days 
+   ##### - 'h' for hours
+   ##### - 'm' for minutes
+   ##### - 's' for seconds
   #### 2. Distance (D)
   #### 3. Weight (w)
   #### 4. Temperature (t)
-   ##### a. 'C' for Celcius
-   ##### b. 'F' for Farhenheit
-   ##### c. 'K' for Kelvin
+   ##### - 'C' for Celcius
+   ##### - 'F' for Farhenheit
+   ##### - 'K' for Kelvin
   #### 5. Volume (v)
 
 
