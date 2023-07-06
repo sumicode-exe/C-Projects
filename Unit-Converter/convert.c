@@ -2,22 +2,22 @@
 #include <math.h>
 #include <string.h>
 
-double Temperature(double C, double F, double K);
-double Distance(double cm, double mm, double km);
-double Volume(double kl, double ml, double l);
-double Time(double ms, double sec, double min, double hrs);
-double Weight(double cg, double mg, double kg);
-double Power(double wt, double kw, double js);
+int Temperature(int C, int F, int K);
+int Distance(int cm, int mm, int km);
+int Volume(int kl, int ml, int l);
+int Time(int ms, int sec, int min, int hrs);
+int Weight(int cg, int mg, int kg);
+int Power(int wt, int kw, int js);
 
 int main()
 {
     // int t, d, v, s, w, p;
-    double C, F, K;
-    double cm, mm, km;
-    double kl, ml, l;
-    double ms, sec, min, hrs;
-    double cg, mg, kg;
-    double wt, kw, js;
+    int C, F, K;
+    int cm, mm, km;
+    int kl, ml, l;
+    int ms, sec, min, hrs;
+    int cg, mg, kg;
+    int wt, kw, js;
     char unit;
     char from, to;
 
@@ -58,11 +58,12 @@ int main()
     }
 }
 
-double Temperature(double C, double F, double K)
+int Temperature(int C, int F, int K)
 {
 
     char from, to;
-    double val;
+    int val;
+    int result;
 
     printf("Enter what you want to convert from: \n");
     scanf(" %c", &from);
@@ -70,14 +71,14 @@ double Temperature(double C, double F, double K)
     printf("Enter what you want to convert to: \n");
     scanf(" %c", &to);
 
-    printf("Enter the numerical value of conversion");
+    printf("Enter the numerical value of conversion: \n");
     scanf("%d", &val);
 
-    (from == 'C' && to == 'F') ? printf("Result is %d Farhenheit", (val * (9 / 5)) + 32) : printf("Plwase wait");
+    (from == 'C' && to == 'F') ? printf("Answer is %d Farhenheit", val * (9.0 / 5) + 32) : (from == 'F' && to == 'C') ?
 }
 
-double Distance(double cm, double mm, double km) {}
-double Volume(double kl, double ml, double l) {}
-double Time(double ms, double sec, double min, double hrs) {}
-double Weight(double cg, double mg, double kg) {}
-double Power(double wt, double kw, double js) {}
+int Distance(int cm, int mm, int km) {}
+int Volume(int kl, int ml, int l) {}
+int Time(int ms, int sec, int min, int hrs) {}
+int Weight(int cg, int mg, int kg) {}
+int Power(int wt, int kw, int js) {}
