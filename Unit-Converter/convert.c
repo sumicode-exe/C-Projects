@@ -2,12 +2,12 @@
 #include <math.h>
 #include <string.h>
 
-double Temperature(double C, double F, double K);
-double Distance(double cm, double mm, double km);
-double Volume(double kl, double ml, double l);
-double Time(double ms, double sec, double min, double hrs);
-double Weight(double cg, double mg, double kg);
-double Power(double wt, double kw, double js);
+int Temperature();
+int Distance();
+int Volume();
+int Time();
+inr Weight();
+int Power();
 
 int main()
 {
@@ -58,7 +58,7 @@ int main()
     }
 }
 
-double Temperature(double C, double F, double K)
+int Temperature()
 {
 
     char from, to;
