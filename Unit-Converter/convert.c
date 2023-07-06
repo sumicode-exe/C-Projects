@@ -15,9 +15,9 @@ int main()
     double C, F, K;
     double cm, mm, km;
     double kl, ml, l;
-    double ms, sec, min, hrs;
+    double wks, sec, min, hrs, dys;
     double cg, mg, kg;
-    double wt, kw, js;
+   // double wt, kw, mw;
     char unit;
     char from, to;
 
@@ -27,7 +27,7 @@ int main()
     printf("of Volume    -   (v):\t Litre(l)\t MilliLitre(ml)\t KiloLitre(kl)\n");
     printf("of Time      -   (tm):\t MilliSeconds(ms)\t Seconds(sec)\t Minutes(min)\t Hours(hrs)\n");
     printf("of Weight    -   (w):\t CentiGram(cg)\t MilliGram(mg)\t KiloGram(kg)\n");
-    printf("of Power     -   (p):\t Watt(wt)\t kiloWatt(kw)\t Joules(js)\n");
+   // printf("of Power     -   (p):\t Watt(wt)\t kiloWatt(kw)\t megaWatt(mw)\n");
 
     printf("Enter what do you want to convert: \n");
     scanf("%c", &unit);
@@ -52,10 +52,12 @@ int main()
     {
         // Weight(cg, mg, kg);
     }
+
+    /*
     else if (unit == 'p')
     {
         // Power(wt, kw, js);
-    }
+    }   */
 }
 
 int Temperature()
@@ -74,12 +76,16 @@ int Temperature()
     printf("Enter the numerical value of conversion: \n");
     scanf("%lf", &val);
 
-    (from == 'C' && to == 'F') ? printf("Answer is %lf Farhenheit", val * (9.0 / 5) + 32) : (from == 'F' && to == 'C') ? printf("Answer is %lf Celcius", (val - 32) * (5.0 / 9))
-                                                                                                                       : printf("hellp");
+    (from == 'C' && to == 'F') ? printf("Answer is %lf Farhenheit", val * (9.0 / 5) + 32) : 
+    (from == 'F' && to == 'C') ? printf("Answer is %lf Celcius", (val - 32) * (5.0 / 9)) :
+    (from == 'C' && to == 'K') ? printf("Answer if %lf Kelvins", val + 273.15) : 
+    (from == 'K' && to == 'C') ? printf("Answer is %lf Celcius", val-273.15) : 
+    (from == 'F' && to == 'K') ? printf("Anser is %lf Kelvin", (val-32)*(5.0/9)+273.15) : 
+    (from == 'K' && to == 'F') ? printf("Answer is %lf Farhenheit", (val-273.15)*(9.0/5)+32) : printf("hi");
 }
 
-int Distance(double cm, double mm, double km) {}
-int Volume(double kl, double ml, double l) {}
-int Time(double ms, double sec, double min, double hrs) {}
-int Weight(double cg, double mg, double kg) {}
-int Power(double wt, double kw, double js) {}
+int Distance() {}
+int Volume() {}
+int Time() {}
+int Weight() {}
+//int Power() {}
