@@ -44,7 +44,7 @@ int main()
     }
     else if (unit == 'V')
     {
-        // Volume(l, ml, kl);
+        Volume(l, ml, kl);
     }
     else if (unit == 't')
     {
@@ -84,7 +84,7 @@ char from, to;
     (from == 'K' && to == 'F') ? printf("Answer is %lf Farhenheit", (val-273.15)*(9.0/5)+32) : 
     printf("Please enter valid conversion units");
 
-    return val;
+    
 }
 
 int Distance() {
@@ -113,11 +113,34 @@ int Distance() {
     (from == 'm' && to == 'k') ? printf("Anser is %lf KiloMeters", val  * 1000000) : 
     (from == 'k' && to == 'm') ? printf("Answer is %lf  MilliMeters", val / 1000000) : 
     printf("Please enter valid conversion units");
-    
-
 
 }
-int Volume() {}
+
+int Volume() {
+    char from, to;
+    double val;
+
+    printf("Enter what you want to convert from: \n");
+    scanf(" %c", &from);
+
+    printf("Enter what you want to convert to: \n");
+    scanf(" %c", &to);
+
+    printf("Enter the numerical value of conversion: \n");
+    scanf("%lf", &val);
+
+    printf("Enter 'l' for litres");
+    printf("Enter 'm for mililitres");
+    printf("Enter 'k for kilolitres");
+
+    (from == 'c' && to == 'm') ? printf("Answer is %lf MilliMeters", val / 10 ) : 
+    (from == 'm' && to == 'c') ? printf("Answer is %lf CentiMeters", val * 10) :
+    (from == 'c' && to == 'k') ? printf("Answer if %lf KiloMeters", val * 100000) : 
+    (from == 'k' && to == 'c') ? printf("Answer is %lf CentiMeters", val / 100000) : 
+    (from == 'm' && to == 'k') ? printf("Anser is %lf KiloMeters", val  * 1000000) : 
+    (from == 'k' && to == 'm') ? printf("Answer is %lf  MilliMeters", val / 1000000) : 
+    printf("Please enter valid conversion units");
+}
 int Time() {}
 int Weight() {}
 //int Power() {}
