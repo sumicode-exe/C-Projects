@@ -102,6 +102,8 @@ int Distance() {
     printf("Enter what you want to convert to: \n");
     fgets(to, 40, stdin);
 
+    printf("Enter the numerical value of conversion: \n");
+    scanf("%lf", &val);
     
     (strcmp(from, "cm") == 0 && strcmp(to, "mm") == 0) ? printf("Answer is %lf MilliMeters", val / 10 ) : 
     (strcmp(from, "mm") == 0 && strcmp(to, "cm") == 0) ? printf("Answer is %lf CentiMeters", val * 10) :
