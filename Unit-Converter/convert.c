@@ -65,8 +65,13 @@ int main()
 int Temperature()
 {
   
-char from, to;
- double val;
+    char from, to;
+    double val;
+
+    printf("Enter 'C' for Celcius");
+    printf("Enter 'F for Farhenheit");
+    printf("Enter 'K' for Kelvin");
+
     printf("Enter what you want to convert from: \n");
     scanf(" %c", &from);
 
@@ -89,7 +94,6 @@ char from, to;
 
 int Distance() {
     
-
     char from, to;
     double val;
 
@@ -117,8 +121,13 @@ int Distance() {
 }
 
 int Volume() {
+
     char from, to;
     double val;
+
+    printf("Enter 'l' for litres");
+    printf("Enter 'm for mililitres");
+    printf("Enter 'k for kilolitres");
 
     printf("Enter what you want to convert from: \n");
     scanf(" %c", &from);
@@ -128,10 +137,6 @@ int Volume() {
 
     printf("Enter the numerical value of conversion: \n");
     scanf("%lf", &val);
-
-    printf("Enter 'l' for litres");
-    printf("Enter 'm for mililitres");
-    printf("Enter 'k for kilolitres");
 
     (from == 'l' && to == 'k') ? printf("Answer is %lf kilolitre", val / 1000) : 
     (from == 'k' && to == 'l') ? printf("Answer is %lf litre", val * 1000) :
@@ -143,6 +148,7 @@ int Volume() {
 }
 
 int Time() {
+
     char from, to;
     double val;
 
@@ -183,5 +189,6 @@ int Time() {
     (from == 's' && to == 'm') ? printf("Answer is %lf minutes", val / 60) :
     printf("Please enter valid conversion units");
 }
+
 int Weight() {}
 //int Power() {}
