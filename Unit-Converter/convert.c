@@ -160,26 +160,26 @@ int Time() {
     printf("Enter 'm' for minutes");
     printf("Enter 's' for seconds");
 
-    (from == 'w' && to == 'k') ? printf("Answer is %lf kilolitre", val / 1000) : 
-    (from == 'w' && to == 'l') ? printf("Answer is %lf litre", val * 1000) :
-    (from == 'w' && to == 'l') ? printf("Answer is %lf litre", val * 1000) :
-    (from == 'w' && to == 'm') ? printf("Answer if %lf milielitre", val * 10000) : 
-    (from == 'd' && to == 'l') ? printf("Answer is %lf litre", val / 10000) : 
-    (from == 'd' && to == 'm') ? printf("Anser is %lf milielitre", val  * 1000000) : 
-    (from == 'd' && to == 'k') ? printf("Answer is %lf  kilolitre", val / 1000000) : 
-    (from == 'd' && to == 'k') ? printf("Answer is %lf kilolitre", val / 1000) : 
-    (from == 'h' && to == 'l') ? printf("Answer is %lf litre", val * 1000) :
-    (from == 'h' && to == 'm') ? printf("Answer if %lf milielitre", val * 10000) : 
-    (from == 'h' && to == 'l') ? printf("Answer is %lf litre", val / 10000) : 
-    (from == 'h' && to == 'm') ? printf("Anser is %lf milielitre", val  * 1000000) : 
-    (from == 'm' && to == 'k') ? printf("Answer is %lf  kilolitre", val / 1000000) : 
-    (from == 'm' && to == 'k') ? printf("Answer is %lf kilolitre", val / 1000) : 
-    (from == 'm' && to == 'l') ? printf("Answer is %lf litre", val * 1000) :
-    (from == 'm' && to == 'm') ? printf("Answer if %lf milielitre", val * 10000) : 
-    (from == 's' && to == 'l') ? printf("Answer is %lf litre", val / 10000) : 
-    (from == 's' && to == 'm') ? printf("Anser is %lf milielitre", val  * 1000000) : 
-    (from == 's' && to == 'k') ? printf("Answer is %lf  kilolitre", val / 1000000) : 
-    (from == 's' && to == 'l') ? printf("Answer is %lf litre", val * 1000) :
+    (from == 'w' && to == 'd') ? printf("Answer is %lf kilolitre", val * 7) : 
+    (from == 'w' && to == 'h') ? printf("Answer is %lf litre", val * 7 * 24) :
+    (from == 'w' && to == 'm') ? printf("Answer is %lf litre", val * 7 * 24 * 60) :
+    (from == 'w' && to == 's') ? printf("Answer if %lf milielitre", val * 7 * 24 * 60 * 60) : 
+    (from == 'd' && to == 'w') ? printf("Answer is %lf litre", val ) : 
+    (from == 'd' && to == 'h') ? printf("Anser is %lf milielitre", val ) : 
+    (from == 'd' && to == 'm') ? printf("Answer is %lf  kilolitre", val ) : 
+    (from == 'd' && to == 's') ? printf("Answer is %lf kilolitre", val ) : 
+    (from == 'h' && to == 'w') ? printf("Answer is %lf litre", val) :
+    (from == 'h' && to == 'd') ? printf("Answer if %lf milielitre", val ) : 
+    (from == 'h' && to == 'm') ? printf("Answer is %lf litre", val ) : 
+    (from == 'h' && to == 's') ? printf("Anser is %lf milielitre", val  ) : 
+    (from == 'm' && to == 'w') ? printf("Answer is %lf  kilolitre", val ) : 
+    (from == 'm' && to == 'd') ? printf("Answer is %lf kilolitre", val ) : 
+    (from == 'm' && to == 'h') ? printf("Answer is %lf litre", val) :
+    (from == 'm' && to == 's') ? printf("Answer if %lf milielitre", val ) : 
+    (from == 's' && to == 'w') ? printf("Answer is %lf litre", val ) : 
+    (from == 's' && to == 'd') ? printf("Anser is %lf milielitre", val) : 
+    (from == 's' && to == 'h') ? printf("Answer is %lf  kilolitre", val ) : 
+    (from == 's' && to == 'm') ? printf("Answer is %lf litre", val ) :
     printf("Please enter valid conversion units");
 }
 int Weight() {}
