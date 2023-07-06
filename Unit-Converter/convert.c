@@ -6,7 +6,7 @@ int Temperature();
 int Distance();
 int Volume();
 int Time();
-inr Weight();
+int Weight();
 int Power();
 
 int main()
@@ -78,8 +78,8 @@ int Temperature()
                                                                                                                        : printf("hellp");
 }
 
-double Distance(double cm, double mm, double km) {}
-double Volume(double kl, double ml, double l) {}
-double Time(double ms, double sec, double min, double hrs) {}
-double Weight(double cg, double mg, double kg) {}
-double Power(double wt, double kw, double js) {}
+int Distance(double cm, double mm, double km) {}
+int Volume(double kl, double ml, double l) {}
+int Time(double ms, double sec, double min, double hrs) {}
+int Weight(double cg, double mg, double kg) {}
+int Power(double wt, double kw, double js) {}
