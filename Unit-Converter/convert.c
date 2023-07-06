@@ -81,7 +81,8 @@ int Temperature()
     (from == 'C' && to == 'K') ? printf("Answer if %lf Kelvins", val + 273.15) : 
     (from == 'K' && to == 'C') ? printf("Answer is %lf Celcius", val-273.15) : 
     (from == 'F' && to == 'K') ? printf("Anser is %lf Kelvin", (val-32)*(5.0/9)+273.15) : 
-    (from == 'K' && to == 'F') ? printf("Answer is %lf Farhenheit", (val-273.15)*(9.0/5)+32) : printf("hi");
+    (from == 'K' && to == 'F') ? printf("Answer is %lf Farhenheit", (val-273.15)*(9.0/5)+32) : 
+    printf("Please enter valid conversion units");
 }
 
 int Distance() {}
