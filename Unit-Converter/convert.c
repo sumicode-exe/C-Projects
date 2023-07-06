@@ -87,20 +87,20 @@ int Temperature()
 
 int Distance() {
     
-    char from, to;
+    char from[40], to[40];
     double val;
     double result;
 
     printf("Enter what you want to convert from: \n");
-    scanf(" %c", &from);
+    fgets(from, 40, stdin);
 
     printf("Enter what you want to convert to: \n");
-    scanf(" %c", &to);
+    fgets(to, 40, stdin);
 
     printf("Enter the numerical value of conversion: \n");
     scanf("%lf", &val);
 
-    (from == 'c' && to == 'm') ? printf("Answer is %lf MilliMeters", val / 10 ) : 
+    (from == 'cm' && to == 'mm') ? printf("Answer is %lf MilliMeters", val / 10 ) : 
     (from == 'm' && to == 'c') ? printf("Answer is %lf CentiMeters", val * 10) :
     (from == 'c' && to == 'k') ? printf("Answer if %lf KiloMeters", val * 100000) : 
     (from == 'k' && to == 'c') ? printf("Answer is %lf CentiMeters", val / 100000) : 
