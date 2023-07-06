@@ -190,5 +190,30 @@ int Time() {
     printf("Please enter valid conversion units");
 }
 
-int Weight() {}
+int Weight() {
+    
+    char from, to;
+    double val;
+
+    printf("Enter 'l' for litres");
+    printf("Enter 'm for mililitres");
+    printf("Enter 'k for kilolitres");
+
+    printf("Enter what you want to convert from: \n");
+    scanf(" %c", &from);
+
+    printf("Enter what you want to convert to: \n");
+    scanf(" %c", &to);
+
+    printf("Enter the numerical value of conversion: \n");
+    scanf("%lf", &val);
+
+    (from == 'l' && to == 'k') ? printf("Answer is %lf kilolitre", val / 1000) : 
+    (from == 'k' && to == 'l') ? printf("Answer is %lf litre", val * 1000) :
+    (from == 'l' && to == 'm') ? printf("Answer if %lf milielitre", val * 10000) : 
+    (from == 'm' && to == 'l') ? printf("Answer is %lf litre", val / 10000) : 
+    (from == 'k' && to == 'm') ? printf("Anser is %lf milielitre", val  * 1000000) : 
+    (from == 'm' && to == 'k') ? printf("Answer is %lf  kilolitre", val / 1000000) : 
+    printf("Please enter valid conversion units");
+}
 //int Power() {}
