@@ -36,11 +36,11 @@ int main()
     {
         Temperature(C, F, K);
     }
-    else if (unit == 'd')
+    else if (unit == 'D')
     {
-        //   Distance(cm, mm, km);
+        Distance(cm, mm, km);
     }
-    else if (unit == 'v')
+    else if (unit == 'V')
     {
         // Volume(l, ml, kl);
     }
@@ -48,7 +48,7 @@ int main()
     {
         // Time(ms, sec, hrs, min);
     }
-    else if (unit == 'w')
+    else if (unit == 'W')
     {
         // Weight(cg, mg, kg);
     }
@@ -86,6 +86,7 @@ int Temperature()
 }
 
 int Distance() {
+    
     char from, to;
     double val;
     double result;
@@ -99,12 +100,12 @@ int Distance() {
     printf("Enter the numerical value of conversion: \n");
     scanf("%lf", &val);
 
-    (from == 'cm' && to == 'mm') ? printf("Answer is %lf Farhenheit", val * (9.0 / 5) + 32) : 
-    (from == 'mm' && to == 'cm') ? printf("Answer is %lf Celcius", (val - 32) * (5.0 / 9)) :
-    (from == 'C' && to == 'K') ? printf("Answer if %lf Kelvins", val + 273.15) : 
-    (from == 'K' && to == 'C') ? printf("Answer is %lf Celcius", val-273.15) : 
-    (from == 'F' && to == 'K') ? printf("Anser is %lf Kelvin", (val-32)*(5.0/9)+273.15) : 
-    (from == 'K' && to == 'F') ? printf("Answer is %lf Farhenheit", (val-273.15)*(9.0/5)+32) : 
+    (from == 'c' && to == 'm') ? printf("Answer is %lf MilliMeters", val / 10 ) : 
+    (from == 'm' && to == 'c') ? printf("Answer is %lf CentiMeters", val * 10) :
+    (from == 'c' && to == 'k') ? printf("Answer if %lf KiloMeters", val * 100000) : 
+    (from == 'k' && to == 'c') ? printf("Answer is %lf CentiMeters", val / 100000) : 
+    (from == 'm' && to == 'k') ? printf("Anser is %lf KiloMeters", val  * 1000000) : 
+    (from == 'k' && to == 'm') ? printf("Answer is %lf  MilliMeters", val / 1000000) : 
     printf("Please enter valid conversion units");
 }
 int Volume() {}
