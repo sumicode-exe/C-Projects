@@ -2,22 +2,22 @@
 #include <math.h>
 #include <string.h>
 
-int Temperature(int C, int F, int K);
-int Distance(int cm, int mm, int km);
-int Volume(int kl, int ml, int l);
-int Time(int ms, int sec, int min, int hrs);
-int Weight(int cg, int mg, int kg);
-int Power(int wt, int kw, int js);
+double Temperature(double C, double F, double K);
+double Distance(double cm, double mm, double km);
+double Volume(double kl, double ml, double l);
+double Time(double ms, double sec, double min, double hrs);
+double Weight(double cg, double mg, double kg);
+double Power(double wt, double kw, double js);
 
 int main()
 {
     // int t, d, v, s, w, p;
-    int C, F, K;
-    int cm, mm, km;
-    int kl, ml, l;
-    int ms, sec, min, hrs;
-    int cg, mg, kg;
-    int wt, kw, js;
+    double C, F, K;
+    double cm, mm, km;
+    double kl, ml, l;
+    double ms, sec, min, hrs;
+    double cg, mg, kg;
+    double wt, kw, js;
     char unit;
     char from, to;
 
@@ -58,34 +58,26 @@ int main()
     }
 }
 
-int Temperature(int C, int F, int K)
+double Temperature(double C, double F, double K)
 {
 
     char from, to;
-    
+    double val;
+
     printf("Enter what you want to convert from: \n");
-    scanf("%c", &from);
+    scanf(" %c", &from);
 
-    if (from == 'C')
-    {
-        printf("Enter what do you want to convert to: \n");
-        scanf("%c", &to);
-        printf("Enter calur of unit: \n");
-        scanf("%d", &C);
+    printf("Enter what you want to convert to: \n");
+    scanf(" %c", &to);
 
-        if (to == 'K')
-        {
-            K = C + 273;
-            printf("Result is %d", K);
-        } else if (to == 'F'){
-            F = C*(9/5)+32;
-            printf("Result is %d", F);
-        }
-    }
-    else if (from == 'K')
-    {
-    }
-    else if (from == 'F')
-    {
-    }
+    printf("Enter the numerical value of conversion");
+    scanf("%d", &val);
+
+    (from == 'C' && to == 'F') ? printf("Result is %d Farhenheit", (val * (9 / 5)) + 32) : printf("Plwase wait");
 }
+
+double Distance(double cm, double mm, double km) {}
+double Volume(double kl, double ml, double l) {}
+double Time(double ms, double sec, double min, double hrs) {}
+double Weight(double cg, double mg, double kg) {}
+double Power(double wt, double kw, double js) {}
