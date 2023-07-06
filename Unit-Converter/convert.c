@@ -36,19 +36,19 @@ int main()
     if (unit == 'T')
     {
         
-        Temperature(C, F, K);
+        Temperature();
     }
     else if (unit == 'D')
     {
-        Distance(cm, mm, km);
+        Distance();
     }
     else if (unit == 'V')
     {
-        Volume(l, ml, kl);
+        Volume();
     }
     else if (unit == 't')
     {
-        // Time(ms, sec, hrs, min);
+        Time();
     }
     else if (unit == 'W')
     {
