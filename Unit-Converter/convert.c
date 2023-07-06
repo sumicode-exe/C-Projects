@@ -65,7 +65,7 @@ int Temperature()
 
     char from, to;
     double val;
-    double result;
+   
 
     printf("Enter what you want to convert from: \n");
     scanf(" %c", &from);
@@ -89,7 +89,7 @@ int Distance() {
     
     char from[40], to[40];
     double val;
-    double result;
+    
 
     printf("Enter what you want to convert from: ");
     fflush(stdin);
