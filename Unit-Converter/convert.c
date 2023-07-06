@@ -191,13 +191,13 @@ int Time() {
 }
 
 int Weight() {
-    
+
     char from, to;
     double val;
 
-    printf("Enter 'l' for litres");
-    printf("Enter 'm for mililitres");
-    printf("Enter 'k for kilolitres");
+    printf("Enter 'g' for gram");
+    printf("Enter 'm' for miligram");
+    printf("Enter 'k' for kilogram");
 
     printf("Enter what you want to convert from: \n");
     scanf(" %c", &from);
@@ -208,12 +208,12 @@ int Weight() {
     printf("Enter the numerical value of conversion: \n");
     scanf("%lf", &val);
 
-    (from == 'l' && to == 'k') ? printf("Answer is %lf kilolitre", val / 1000) : 
-    (from == 'k' && to == 'l') ? printf("Answer is %lf litre", val * 1000) :
-    (from == 'l' && to == 'm') ? printf("Answer if %lf milielitre", val * 10000) : 
-    (from == 'm' && to == 'l') ? printf("Answer is %lf litre", val / 10000) : 
-    (from == 'k' && to == 'm') ? printf("Anser is %lf milielitre", val  * 1000000) : 
-    (from == 'm' && to == 'k') ? printf("Answer is %lf  kilolitre", val / 1000000) : 
+    (from == 'g' && to == 'm') ? printf("Answer is %lf grams", val / 1000) : 
+    (from == 'm' && to == 'g') ? printf("Answer is %lf milliegrams", val * 1000) :
+    (from == 'g' && to == 'k') ? printf("Answer if %lf grams", val * 1000) : 
+    (from == 'k' && to == 'g') ? printf("Answer is %lf kilogram", val / 1000) : 
+    (from == 'm' && to == 'k') ? printf("Anser is %lf milliegram", val  * 1000000) : 
+    (from == 'k' && to == 'm') ? printf("Answer is %lf  kilogram", val / 1000000) : 
     printf("Please enter valid conversion units");
 }
 //int Power() {}
