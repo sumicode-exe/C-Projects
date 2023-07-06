@@ -10,13 +10,13 @@ _____________________________________
 ### The calculator operates the following, mentioned along with the calling characters:
 
 | #### a. Sum - '+'         |  #### e. Compund Interest - 'c'         |
-                            | 
+------------------------    | ------------------------
 | #### b. Product - '*'     | #### f. Simple Interest - 's'           |
-                            | 
+------------------------    | ------------------------
 | #### c. Difference - '-'  | #### g. Multiplication of Matrices - 'X'|
-                            | 
+------------------------    | ------------------------
 | #### d. Dividend - '/'    | #### h. Profit/Loss - '!'               |
-                            | 
+------------------------    | ------------------------
 
 _____________________________________ 
 
