@@ -19,6 +19,7 @@ int main()
     double cg, mg, kg;
    // double wt, kw, mw;
     char unit;
+    double val;
     char from, to;
 
     printf("This calculator converts units: \n");
@@ -34,6 +35,7 @@ int main()
 
     if (unit == 'T')
     {
+        
         Temperature(C, F, K);
     }
     else if (unit == 'D')
@@ -83,6 +85,8 @@ int Temperature()
     (from == 'F' && to == 'K') ? printf("Anser is %lf Kelvin", (val-32)*(5.0/9)+273.15) : 
     (from == 'K' && to == 'F') ? printf("Answer is %lf Farhenheit", (val-273.15)*(9.0/5)+32) : 
     printf("Please enter valid conversion units");
+
+    return val;
 }
 
 int Distance() {
@@ -90,22 +94,15 @@ int Distance() {
 
     char from[40], to[40];
     double val;
+
     
-
- printf("Enter the numerical value of conversion: \n");
-    scanf("%lf", &val);
-
     printf("Enter what you want to convert from: ");
-    //fflush(stdin);
     fgets(from, 40, stdin);
-
-    // printf("Enter what you want to convert to: \n");
-    // //fflush(stdin);
-    // fgets(to, 40, stdin);
-
    
+    printf("Enter what you want to convert to: \n");
+    fgets(to, 40, stdin);
 
-
+    
     (strcmp(from, "cm") == 0 && strcmp(to, "mm") == 0) ? printf("Answer is %lf MilliMeters", val / 10 ) : 
     (strcmp(from, "mm") == 0 && strcmp(to, "cm") == 0) ? printf("Answer is %lf CentiMeters", val * 10) :
     (strcmp(from, "cm") == 0 && strcmp(to, "km") == 0) ? printf("Answer if %lf KiloMeters", val * 100000) : 
