@@ -93,7 +93,7 @@ int Distance() {
 
     printf("Enter what you want to convert from: ");
     fflush(stdin);
-    fgets(from, sizeof(from), stdin);
+    fgets(from, 40, stdin);
 
   
    
@@ -106,12 +106,12 @@ int Distance() {
     scanf("%lf", &val);
 
 
-    (from == "cm" && to == "mm") ? printf("Answer is %lf MilliMeters", val / 10 ) : 
-    (from == "mm" && to == "cm") ? printf("Answer is %lf CentiMeters", val * 10) :
-    (from == "cm" && to == "km") ? printf("Answer if %lf KiloMeters", val * 100000) : 
-    (from == "km" && to == "cm") ? printf("Answer is %lf CentiMeters", val / 100000) : 
-    (from == "mm" && to == "km") ? printf("Anser is %lf KiloMeters", val  * 1000000) : 
-    (from == "km" && to == "mm") ? printf("Answer is %lf  MilliMeters", val / 1000000) : 
+    (strcmp(from, "cm") == 0 && strcmp(to, "mm") == 0) ? printf("Answer is %lf MilliMeters", val / 10 ) : 
+    (strcmp(from, "mm") == 0 && strcmp(to, "cm") == 0) ? printf("Answer is %lf CentiMeters", val * 10) :
+    (strcmp(from, "cm") == 0 && strcmp(to, "km") == 0) ? printf("Answer if %lf KiloMeters", val * 100000) : 
+    (strcmp(from, "km") == 0 && strcmp(to, "cm") == 0) ? printf("Answer is %lf CentiMeters", val / 100000) : 
+    (strcmp(from, "mm") == 0 && strcmp(to, "km") == 0) ? printf("Anser is %lf KiloMeters", val  * 1000000) : 
+    (strcmp(from, "km") == 0 && strcmp(to, "mm") == 0) ? printf("Answer is %lf  MilliMeters", val / 1000000) : 
     printf("Please enter valid conversion units");
 }
 int Volume() {}
