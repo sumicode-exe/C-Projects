@@ -52,7 +52,7 @@ int main()
     }
     else if (unit == 'W')
     {
-        // Weight(cg, mg, kg);
+        Weight();
     }
 
     /*
