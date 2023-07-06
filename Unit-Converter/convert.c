@@ -141,9 +141,16 @@ int Volume() {
     (from == 'm' && to == 'k') ? printf("Answer is %lf  kilolitre", val / 1000000) : 
     printf("Please enter valid conversion units");
 }
+
 int Time() {
     char from, to;
     double val;
+
+    printf("Enter 'w' for weeks \n");
+    printf("Enter 'd' for days \n");
+    printf("Enter 'h' for hours \n");
+    printf("Enter 'm' for minutes \n");
+    printf("Enter 's' for seconds \n");
 
     printf("Enter what you want to convert from: \n");
     scanf(" %c", &from);
@@ -153,12 +160,6 @@ int Time() {
 
     printf("Enter the numerical value of conversion: \n");
     scanf("%lf", &val);
-
-    printf("Enter 'w' for weeks");
-    printf("Enter 'd' for days");
-    printf("Enter 'h' for hours");
-    printf("Enter 'm' for minutes");
-    printf("Enter 's' for seconds");
 
     (from == 'w' && to == 'd') ? printf("Answer is %lf kilolitre", val * 7) : 
     (from == 'w' && to == 'h') ? printf("Answer is %lf litre", val * 7 * 24) :
