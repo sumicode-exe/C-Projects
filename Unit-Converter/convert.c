@@ -161,26 +161,26 @@ int Time() {
     printf("Enter the numerical value of conversion: \n");
     scanf("%lf", &val);
 
-    (from == 'w' && to == 'd') ? printf("Answer is %lf kilolitre", val * 7) : 
-    (from == 'w' && to == 'h') ? printf("Answer is %lf litre", val * 7 * 24) :
-    (from == 'w' && to == 'm') ? printf("Answer is %lf litre", val * 7 * 24 * 60) :
-    (from == 'w' && to == 's') ? printf("Answer if %lf milielitre", val * 7 * 24 * 60 * 60) : 
-    (from == 'd' && to == 'w') ? printf("Answer is %lf litre", val / 7) : 
-    (from == 'd' && to == 'h') ? printf("Anser is %lf milielitre", val * 24) : 
-    (from == 'd' && to == 'm') ? printf("Answer is %lf  kilolitre", val * 24 * 60) : 
-    (from == 'd' && to == 's') ? printf("Answer is %lf kilolitre", val * 24 * 60 * 60) : 
-    (from == 'h' && to == 'w') ? printf("Answer is %lf litre", val / (24 * 7)) :
-    (from == 'h' && to == 'd') ? printf("Answer if %lf milielitre", val / 24) : 
-    (from == 'h' && to == 'm') ? printf("Answer is %lf litre", val * 60) : 
-    (from == 'h' && to == 's') ? printf("Anser is %lf milielitre", val * 60 * 60) : 
-    (from == 'm' && to == 'w') ? printf("Answer is %lf  kilolitre", val / (60 * 24 * 7)) : 
-    (from == 'm' && to == 'd') ? printf("Answer is %lf kilolitre", val / (60 * 24)) : 
-    (from == 'm' && to == 'h') ? printf("Answer is %lf litre", val / 60) :
-    (from == 'm' && to == 's') ? printf("Answer if %lf milielitre", val * 60 ) : 
-    (from == 's' && to == 'w') ? printf("Answer is %lf litre", val * (60 * 60 * 24 * 7)) : 
-    (from == 's' && to == 'd') ? printf("Anser is %lf milielitre", val / (60 * 24 * 7) ): 
-    (from == 's' && to == 'h') ? printf("Answer is %lf  kilolitre", val / (24 * 60)) : 
-    (from == 's' && to == 'm') ? printf("Answer is %lf litre", val / 60) :
+    (from == 'w' && to == 'd') ? printf("Answer is %lf days", val * 7) : 
+    (from == 'w' && to == 'h') ? printf("Answer is %lf hours", val * 7 * 24) :
+    (from == 'w' && to == 'm') ? printf("Answer is %lf minutes", val * 7 * 24 * 60) :
+    (from == 'w' && to == 's') ? printf("Answer if %lf seconds", val * 7 * 24 * 60 * 60) : 
+    (from == 'd' && to == 'w') ? printf("Answer is %lf weeks", val / 7) : 
+    (from == 'd' && to == 'h') ? printf("Anser is %lf hours", val * 24) : 
+    (from == 'd' && to == 'm') ? printf("Answer is %lf  minutes", val * 24 * 60) : 
+    (from == 'd' && to == 's') ? printf("Answer is %lf seconnds", val * 24 * 60 * 60) : 
+    (from == 'h' && to == 'w') ? printf("Answer is %lf weeks", val / (24 * 7)) :
+    (from == 'h' && to == 'd') ? printf("Answer if %lf days", val / 24) : 
+    (from == 'h' && to == 'm') ? printf("Answer is %lf minutes", val * 60) : 
+    (from == 'h' && to == 's') ? printf("Anser is %lf seconds", val * 60 * 60) : 
+    (from == 'm' && to == 'w') ? printf("Answer is %lf  weeks", val / (60 * 24 * 7)) : 
+    (from == 'm' && to == 'd') ? printf("Answer is %lf days", val / (60 * 24)) : 
+    (from == 'm' && to == 'h') ? printf("Answer is %lf hours", val / 60) :
+    (from == 'm' && to == 's') ? printf("Answer if %lf seconds", val * 60 ) : 
+    (from == 's' && to == 'w') ? printf("Answer is %lf weeks", val * (60 * 60 * 24 * 7)) : 
+    (from == 's' && to == 'd') ? printf("Anser is %lf days", val / (60 * 24 * 7) ): 
+    (from == 's' && to == 'h') ? printf("Answer is %lf  hours", val / (24 * 60)) : 
+    (from == 's' && to == 'm') ? printf("Answer is %lf minutes", val / 60) :
     printf("Please enter valid conversion units");
 }
 int Weight() {}
