@@ -85,7 +85,28 @@ int Temperature()
     printf("Please enter valid conversion units");
 }
 
-int Distance() {}
+int Distance() {
+    char from, to;
+    double val;
+    double result;
+
+    printf("Enter what you want to convert from: \n");
+    scanf(" %c", &from);
+
+    printf("Enter what you want to convert to: \n");
+    scanf(" %c", &to);
+
+    printf("Enter the numerical value of conversion: \n");
+    scanf("%lf", &val);
+
+    (from == 'cm' && to == 'mm') ? printf("Answer is %lf Farhenheit", val * (9.0 / 5) + 32) : 
+    (from == 'mm' && to == 'cm') ? printf("Answer is %lf Celcius", (val - 32) * (5.0 / 9)) :
+    (from == 'C' && to == 'K') ? printf("Answer if %lf Kelvins", val + 273.15) : 
+    (from == 'K' && to == 'C') ? printf("Answer is %lf Celcius", val-273.15) : 
+    (from == 'F' && to == 'K') ? printf("Anser is %lf Kelvin", (val-32)*(5.0/9)+273.15) : 
+    (from == 'K' && to == 'F') ? printf("Answer is %lf Farhenheit", (val-273.15)*(9.0/5)+32) : 
+    printf("Please enter valid conversion units");
+}
 int Volume() {}
 int Time() {}
 int Weight() {}
