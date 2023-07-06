@@ -9,18 +9,37 @@ _____________________________________
 ### This project is made using three concepts - Ternaries, Switch-Cases and If-Else statements.
 ### The calculator operates the following, mentioned along with the calling characters:
 
-| a. Sum - '+'         |   e. Compund Interest - 'c'         |
-|                      |                                     |
-|  b. Product - '*'    |  f. Simple Interest - 's'           |
-|                      |                                     |
-|  c. Difference - '-' |  g. Multiplication of Matrices - 'X'|
----------------------  |                                     |
-|  d. Dividend - '/'   |  h. Profit/Loss - '!'               |
-|                      |                                     |
+#### a. Sum - '+'
+#### b. Product - '*'
+#### c. Difference - '-'
+#### d. Dividend - '/'
+#### e. Compund Interest - 'c'
+#### f. Simple Interest - 's'
+#### g. Multiplication of Matrices - 'X'
+#### h. Profit/Loss - '!'
 
 _____________________________________ 
 
 ## 2. UNIT CONVERTER
+
+### This project is made using basic function calls and if else statements
+### First if else statement calls the functions on the basis of category of unit:
+### It then categorises the scale within each:
+ 
+  #### 1. Time (t)
+   ##### a. 'w' for weeks 
+   ##### b. 'd' for days 
+   ##### c. 'h' for hours
+   ##### d. 'm' for minutes
+   ##### e. 's' for seconds
+  #### 2. Distance (D)
+  #### 3. Weight (w)
+  #### 4. Temperature (t)
+   ##### a. 'C' for Celcius
+   ##### b. 'F' for Farhenheit
+   ##### c. 'K' for Kelvin
+  #### 5. Volume (v)
+
 
 
 
