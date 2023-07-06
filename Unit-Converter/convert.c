@@ -34,8 +34,7 @@ int main()
     scanf("%c", &unit);
 
     if (unit == 'T')
-    {
-        
+    {        
         Temperature();
     }
     else if (unit == 'D')
