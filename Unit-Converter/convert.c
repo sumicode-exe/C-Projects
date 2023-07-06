@@ -62,8 +62,8 @@ int Temperature(int C, int F, int K)
 {
 
     char from, to;
-    int val;
-    int result;
+    double val;
+    double result;
 
     printf("Enter what you want to convert from: \n");
     scanf(" %c", &from);
@@ -72,9 +72,9 @@ int Temperature(int C, int F, int K)
     scanf(" %c", &to);
 
     printf("Enter the numerical value of conversion: \n");
-    scanf("%d", &val);
+    scanf("%lf", &val);
 
-    (from == 'C' && to == 'F') ? printf("Answer is %d Farhenheit", val * (9.0 / 5) + 32) : (from == 'F' && to == 'C') ? printf("Answer is %d Celcius", val - 32 * (5.0 / 9)):printf("hellp");
+    (from == 'C' && to == 'F') ? printf("Answer is %lf Farhenheit", val * (9.0 / 5) + 32) : (from == 'F' && to == 'C') ? printf("Answer is %lf Celcius", (val - 32) * (5.0 / 9)):printf("hellp");
 }
 
 int Distance(int cm, int mm, int km) {}
