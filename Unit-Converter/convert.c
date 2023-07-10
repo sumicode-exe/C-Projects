@@ -126,13 +126,13 @@ int Distance()
                                                                              : (from == 'k' && to == 'm')   ? printf("Answer is %lf  MilliMeters", val / 1000000)
                                                                                                             : printf("Please enter valid conversion units");
 
-    // (from == 'c' && to == 'm') ? printf("Answer is %lf MilliMeters", val / 10 ) :
-    // (from == 'm' && to == 'c') ? printf("Answer is %lf CentiMeters", val * 10) :
-    // (from == 'c' && to == 'k') ? printf("Answer if %lf KiloMeters", val * 100000) :
-    // (from == 'k' && to == 'c') ? printf("Answer is %lf CentiMeters", val / 100000) :
-    // (from == 'm' && to == 'k') ? printf("Anser is %lf KiloMeters", val  * 1000000) :
-    // (from == 'k' && to == 'm') ? printf("Answer is %lf  MilliMeters", val / 1000000) :
-    // printf("Please enter valid conversion units");
+    (from == 'c' && to == 'm') ? printf("Answer is %lf MilliMeters", val / 10 ) :
+    (from == 'm' && to == 'c') ? printf("Answer is %lf CentiMeters", val * 10) :
+    (from == 'c' && to == 'k') ? printf("Answer if %lf KiloMeters", val * 100000) :
+    (from == 'k' && to == 'c') ? printf("Answer is %lf CentiMeters", val / 100000) :
+    (from == 'm' && to == 'k') ? printf("Answer is %lf KiloMeters", val  * 1000000) :
+    (from == 'k' && to == 'm') ? printf("Answer is %lf MilliMeters", val / 1000000) :
+    printf("Please enter valid conversion units");
 }
 
 int Volume()
