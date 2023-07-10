@@ -2,14 +2,15 @@
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
+#include <windows.h>
 
 #define Student struct Stud
 
-void addit(FILE * fp);
-void modify(FILE * fp);
-void display(FILE * fp);
-FILE * del(FILE * fp);
-void printChar(char ch,int n);
+void addit(FILE *fp);
+void modify(FILE *fp);
+void display(FILE *fp);
+FILE *del(FILE *fp);
+void printChar(char ch, int n);
 void title();
 FILE *tp;
 
@@ -26,22 +27,21 @@ int main()
 {
     int ch, id, k, i;
     char c, add, pas[50];
-    FILE * fp;
+    FILE *fp;
     Student s;
     int option;
     char another;
 
-    if((fp=fopen("db.txt","rb+"))==NULL)
-    {
-        if((fp=fopen("db.txt","wb+"))==NULL)
-        {
-            printf("Can't create or open Database.");
-            return 0;
-        }
-    }
+    // if((fp=fopen("db.txt","rb+"))==NULL)
+    // {
+    //     if((fp=fopen("db.txt","wb+"))==NULL)
+    //     {
+    //         printf("Can't create or open Database.");
+    //         return 0;
+    //     }
+    // }
 
     printf("\n\n\n\t\t\t       press any key to Enter");
-    
 
     while (1)
     {
@@ -54,7 +54,6 @@ int main()
         printf("\n\n\t\t\t\t3. Show All Student");
         printf("\n\n\t\t\t\t4. Remove Student");
 
-        
         printf("\n\n\t\t\t\tEnter Your Option :--> ");
         scanf("%d", &option);
 
@@ -75,9 +74,9 @@ int main()
         }
     }
 }
-void printChar(char ch,int n)
+void printChar(char ch, int n)
 {
-    while(n--)
+    while (n--)
     {
         putchar(ch);
     }
@@ -91,7 +90,6 @@ void addit(FILE * fp)
     Student s;
     int i;
     float cgpa;
-    Student *ptr = &s;
 
     fseek(fp,0,SEEK_END);
     while(another=='y'||another=='Y')
@@ -110,23 +108,35 @@ void addit(FILE * fp)
         printf("\n\n\t\tEnter Roll number: ");
         scanf("%d",&s.roll);
 
-        printf("\n\n\tEnter SGPA\n");
-        scanf("%f", (*ptr).sgpa[i]);
-        cgpa+=s.sgpa[i];
+        printf("\n\n\tEnter SGPA for 12 semesters\n");
+        for(i=0,cgpa=0; i<12; i++)
+        {
+            scanf("%f",&s.sgpa[i]);
+            cgpa+=s.sgpa[i];
 
+        }
+
+        cgpa/=12.0;
+        s.cgpa=cgpa;
+
+        fwrite(&s,sizeof(s),1,fp);
+
+        printf("\n\n\t\tAdd another student?(Y/N)?");
+        fflush(stdin);
+        another=getchar();
     }
-
 }
 
-FILE * del(FILE * fp)
+
+FILE *del(FILE *fp)
 {
     title();
 
     Student s;
-    int flag=0,tempRoll,siz=sizeof(s);
+    int flag = 0, tempRoll, siz = sizeof(s);
     FILE *ft;
 
-    if((ft=fopen("temp.txt","wb+"))==NULL)
+    if ((ft = fopen("temp.txt", "wb+")) == NULL)
     {
         printf("\n\n\t\t\t\\t!!! ERROR !!!\n\t\t");
         system("pause");
@@ -135,40 +145,39 @@ FILE * del(FILE * fp)
 
     printf("\n\n\tEnter Roll number of Student to Delete the Record");
     printf("\n\n\t\t\tRoll No. : ");
-    scanf("%d",&tempRoll);
+    scanf("%d", &tempRoll);
 
     rewind(fp);
 
-
-    while((fread(&s,siz,1,fp))==1)
+    while ((fread(&s, siz, 1, fp)) == 1)
     {
-        if(s.roll==tempRoll)
+        if (s.roll == tempRoll)
         {
-            flag=1;
+            flag = 1;
             printf("\n\tRecord Deleted for");
-            printf("\n\n\t\t%s\n\n\t\t%s\n\n\t\t%d\n\t",s.name,s.dept,s.roll);
+            printf("\n\n\t\t%s\n\n\t\t%s\n\n\t\t%d\n\t", s.name, s.dept, s.roll);
             continue;
         }
 
-        fwrite(&s,siz,1,ft);
+        fwrite(&s, siz, 1, ft);
     }
-
 
     fclose(fp);
     fclose(ft);
 
     remove("db.txt");
-    rename("temp.txt","db.txt");
+    rename("temp.txt", "db.txt");
 
-    if((fp=fopen("db.txt","rb+"))==NULL)
+    if ((fp = fopen("db.txt", "rb+")) == NULL)
     {
         printf("ERROR");
-        return  NULL;
+        return NULL;
     }
 
-    if(flag==0) printf("\n\n\t\tNO STUDENT FOUND WITH THE INFORMATION\n\t");
+    if (flag == 0)
+        printf("\n\n\t\tNO STUDENT FOUND WITH THE INFORMATION\n\t");
 
-    printChar('-',65);
+    printChar('-', 65);
     printf("\n\t");
     system("pause");
     return fp;
@@ -179,102 +188,97 @@ void title()
     system("cls");
     system("COLOR 03");
     printf("\n\n\t");
-    printChar('=',19);
+    printChar('=', 19);
     printf(" Student Management System ");
-    printChar('=',19);
+    printChar('=', 19);
     printf("\n");
 }
 
-
-
-void modify(FILE * fp)
+void modify(FILE *fp)
 {
     title();
 
     Student s;
-    int i,flag=0,tempRoll,siz=sizeof(s);
+    int i, flag = 0, tempRoll, siz = sizeof(s);
     float cgpa;
 
     printf("\n\n\tEnter Roll Number of Student to MODIFY the Record : ");
-    scanf("%d",&tempRoll);
+    scanf("%d", &tempRoll);
 
     rewind(fp);
 
-    while((fread(&s,siz,1,fp))==1)
+    while ((fread(&s, siz, 1, fp)) == 1)
     {
-        if(s.roll==tempRoll)
+        if (s.roll == tempRoll)
         {
-            flag=1;
+            flag = 1;
             break;
         }
     }
 
-    if(flag==1)
+    if (flag == 1)
     {
-        fseek(fp,-siz,SEEK_CUR);
+        fseek(fp, -siz, SEEK_CUR);
         printf("\n\n\t\t\t\tRecord Found\n\t\t\t");
-        printChar('=',38);
-        printf("\n\n\t\t\tStudent Name: %s",s.name);
-        printf("\n\n\t\t\tStudent Roll: %d\n\t\t\t",s.roll);
-        printChar('=',38);
+        printChar('=', 38);
+        printf("\n\n\t\t\tStudent Name: %s", s.name);
+        printf("\n\n\t\t\tStudent Roll: %d\n\t\t\t", s.roll);
+        printChar('=', 38);
         printf("\n\n\t\t\tEnter New Data for the student");
 
         printf("\n\n\t\t\tEnter Full Name of Student: ");
         fflush(stdin);
-        fgets(s.name,100,stdin);
-        s.name[strlen(s.name)-1]='\0';
+        fgets(s.name, 100, stdin);
+        s.name[strlen(s.name) - 1] = '\0';
 
         printf("\n\n\t\t\tEnter Department: ");
         fflush(stdin);
-        fgets(s.dept,50,stdin);
-        s.dept[strlen(s.dept)-1]='\0';
+        fgets(s.dept, 50, stdin);
+        s.dept[strlen(s.dept) - 1] = '\0';
 
         printf("\n\n\t\t\tEnter Roll number: ");
-        scanf("%d",&s.roll);
-
+        scanf("%d", &s.roll);
 
         printf("\n\n\t\tEnter SGPA for 12 semesters\n");
-        for(i=0,cgpa=0; i<12; i++)
+        for (i = 0, cgpa = 0; i < 12; i++)
         {
-            scanf("%f",&s.sgpa[i]);
-            cgpa+=s.sgpa[i];
-
+            scanf("%f", &s.sgpa[i]);
+            cgpa += s.sgpa[i];
         }
-        cgpa=cgpa/8.0;
+        cgpa = cgpa / 8.0;
 
-
-        fwrite(&s,sizeof(s),1,fp);
+        fwrite(&s, sizeof(s), 1, fp);
     }
 
-    else printf("\n\n\t!!!! ERROR !!!! RECORD NOT FOUND");
+    else
+        printf("\n\n\t!!!! ERROR !!!! RECORD NOT FOUND");
 
     printf("\n\n\t");
     system("pause");
-
 }
 
-void display(FILE * fp)
+void display(FILE *fp)
 {
     title();
     Student s;
-    int i,siz=sizeof(s);
+    int i, siz = sizeof(s);
 
     rewind(fp);
 
-    while((fread(&s,siz,1,fp))==1)
+    while ((fread(&s, siz, 1, fp)) == 1)
     {
-        printf("\n\t\tNAME : %s",s.name);
-        printf("\n\n\t\tDepertment : %s",s.dept);
-        printf("\n\n\t\tROLL : %d",s.roll);
+        printf("\n\t\tNAME : %s", s.name);
+        printf("\n\n\t\tDepertment : %s", s.dept);
+        printf("\n\n\t\tROLL : %d", s.roll);
         printf("\n\n\tSGPA: ");
 
-        for(i=0; i<12; i++)
-            printf("| %.2f |",s.sgpa[i]);
-        printf("\n\n\t\tCGPA : %.2f\n\t",s.cgpa);
-        printChar('-',65);
+        for (i = 0; i < 12; i++)
+            printf("| %.2f |", s.sgpa[i]);
+        printf("\n\n\t\tCGPA : %.2f\n\t", s.cgpa);
+        printChar('-', 65);
     }
     printf("\n\n\n\t");
-    printChar('*',65);
+    printChar('*', 65);
     printf("\n\n\t");
     system("pause");
 }
