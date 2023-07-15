@@ -58,3 +58,24 @@ int main()
         printf("EEEGGGHHH wrong md");
     }
 }
+
+// 3. Also, I am confused with the concept of `strcmp()` giving and comparing on basis of outputs: -1, 0, 1.
+// I mean when I tried in a code, it did not quite match the logic
+// E.G: 
+// ```
+//       char monday[] = {'m', 'o', 'n', 'd', 'a', 'y', '\0'}
+//       char day[40];
+//       printf("Enter day: ");
+//       fgets(day, 40, stdin);
+
+
+//      if((strcmp(day, monday) == -1)){
+//          printf("Mondayyy\n");
+//      } else {
+//          printf("ugh no");
+//      }
+// ```        
+
+// Why is it that, in here, its -1? Since my `char monday[]` and my input ` "monday" ` are exactly same, should not it be ` ==0 ` ??
+// But it doesn't work when compared with 0. So if somebody could please explain how exactly `strcmp()` checking ascii values. 
+
