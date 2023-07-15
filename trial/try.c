@@ -44,11 +44,17 @@ int main()
     printf("Enter full name : ");
     fgets(fullName, 40, stdin);
     puts(fullName);
-    printf("After reversing string is =%s", strrev(fullName));
+    printf("After reversing string is =%s \n", strrev(fullName));
 
-    if(strcmp(fullName, monday) != 0){
-        printf("Monday");
+    if((strcmp(fullName, monday) != 0) || (strcmp(fullName, tuesday) != 0) || (strcmp(fullName, wednesday) != 0) ||(strcmp(fullName, thursday) != 0) ||(strcmp(fullName, friday) != 0) ||(strcmp(fullName, saturday) != 0)){
+        printf("Sunday \n");
     } else {
-        printf("no");
+        printf("no \n");
+    }
+
+    if((strcmp(fullName, sunday) == -1)){
+        printf("Sundyyyy \n");
+    } else {
+        printf("EEEGGGHHH wrong md");
     }
 }
