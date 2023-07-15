@@ -54,10 +54,10 @@ int main()
         Weight();
     }
 
-     else if (unit == 'p')
+    else if (unit == 'p')
     {
         Power();
-    } 
+    }
 }
 
 int Temperature()
@@ -97,8 +97,6 @@ int Distance()
     // *ptr = from;
     // *pptr = to;
 
-
-
     // printf("What do you want to convert from? : \n");
     // fgets(*ptr, 10, stdin);
 
@@ -125,13 +123,12 @@ int Distance()
                                                                              : (from == 'k' && to == 'm')   ? printf("Answer is %lf  MilliMeters", val / 1000000)
                                                                                                             : printf("Please enter valid conversion units");
 
-    (from == 'c' && to == 'm') ? printf("Answer is %lf MilliMeters", val / 10 ) :
-    (from == 'm' && to == 'c') ? printf("Answer is %lf CentiMeters", val * 10) :
-    (from == 'c' && to == 'k') ? printf("Answer if %lf KiloMeters", val * 100000) :
-    (from == 'k' && to == 'c') ? printf("Answer is %lf CentiMeters", val / 100000) :
-    (from == 'm' && to == 'k') ? printf("Answer is %lf KiloMeters", val  * 1000000) :
-    (from == 'k' && to == 'm') ? printf("Answer is %lf MilliMeters", val / 1000000) :
-    printf("Please enter valid conversion units");
+    (from == 'c' && to == 'm') ? printf("Answer is %lf MilliMeters", val / 10) : (from == 'm' && to == 'c') ? printf("Answer is %lf CentiMeters", val * 10)
+                                                                             : (from == 'c' && to == 'k')   ? printf("Answer if %lf KiloMeters", val * 100000)
+                                                                             : (from == 'k' && to == 'c')   ? printf("Answer is %lf CentiMeters", val / 100000)
+                                                                             : (from == 'm' && to == 'k')   ? printf("Answer is %lf KiloMeters", val * 1000000)
+                                                                             : (from == 'k' && to == 'm')   ? printf("Answer is %lf MilliMeters", val / 1000000)
+                                                                                                            : printf("Please enter valid conversion units");
 }
 
 int Volume()
@@ -231,9 +228,21 @@ int Weight()
                                                                                                         : printf("Please enter valid conversion units");
 }
 
-int Power() {
-    char from[2], to[2];
+int Power()
+{
+
     double val;
+
+    printf("Enter the numerical value of conversion: \n");
+    scanf("%lf", &val);
+
+    fflush(stdin);
+
+    char ml[3] = {'m', 'l', '\0'};
+    char l[2] = {'l', '\0'};
+    char kl[3] = {'k', 'l', '\0'};
+
+    char from[2], to[2];
 
     printf("Enter 'l' for litres");
     printf("Enter 'm for mililitres");
@@ -245,8 +254,10 @@ int Power() {
     printf("Enter what you want to convert to: \n");
     fgets(to, 10, stdin);
 
-    printf("Enter the numerical value of conversion: \n");
-    scanf("%lf", &val);
-
-                              
+    if ((strcmp(l, from) != 0) || (strcmp(kl, from) != 0) && (strcmp(ml, to) != 0) || (strcmp(kl, to) != 0))
+    {
+        printf("HAHA YES");
+    } else {
+        printf("no fu");
+    }
 }
