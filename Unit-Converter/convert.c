@@ -54,10 +54,10 @@ int main()
         Weight();
     }
 
-     else if (unit == 'p')
-    {
-        Power();
-    } 
+    //  else if (unit == 'p')
+    // {
+    //     Power();
+    // } 
 }
 
 int Temperature()
@@ -231,22 +231,22 @@ int Weight()
                                                                                                         : printf("Please enter valid conversion units");
 }
 
-int Power() {
-    char from, to;
-    double val;
+// int Power() {
+//     char from[2], to[2];
+//     double val;
 
-    printf("Enter 'l' for litres");
-    printf("Enter 'm for mililitres");
-    printf("Enter 'k for kilolitres");
+//     printf("Enter 'l' for litres");
+//     printf("Enter 'm for mililitres");
+//     printf("Enter 'k for kilolitres");
 
-    printf("Enter what you want to convert from: \n");
-    scanf(" %c", &from);
+//     printf("Enter what you want to convert from: \n");
+//     fgets(from, 10, stdin);
 
-    printf("Enter what you want to convert to: \n");
-    scanf(" %c", &to);
+//     printf("Enter what you want to convert to: \n");
+//     fgets(to, 10, stdin);
 
-    printf("Enter the numerical value of conversion: \n");
-    scanf("%lf", &val);
+//     printf("Enter the numerical value of conversion: \n");
+//     scanf("%lf", &val);
 
                               
-}
+// }
