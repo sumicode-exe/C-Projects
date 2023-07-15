@@ -57,3 +57,9 @@ int main()
 // Why is it that, in here, its -1? Since my `char monday[]` and my input ` "monday" ` are exactly same, should not it be ` ==0 ` ??
 // But it doesn't work when compared with 0. So if somebody could please explain how exactly `strcmp()` checking ascii values. 
 
+
+
+// 2. I do not want to keep it very very simple: 
+// Like input "C" for celcius and compare it with char. 
+// I actually made my converter with that and it worked. 
+// But I am learning and would like to understand this.

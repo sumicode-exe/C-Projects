@@ -22,74 +22,24 @@ int main()
 
 int Temperature()
 {
-
-    char celcius[] = "celcius";
-    char farenheit[] = "farenheit";
-    char kelvin[] = "kelvin";
-
     double val;
+    char strFrom[10];
+    char strTo[10];
 
-    printf("Enter the numerical value of conversion;");
-    scanf(" %lf", &val);
+    printf("Enter from:");
+    scanf("%s", strFrom);
+    printf("Enter to:");
+    scanf("%s", strTo);
 
-    getchar();
-    printf("enter string from: ");
-    char from[100];
-    char ch1;
-    int i = 0;
-
-    while (ch1 != '\n')
+    if ((strcmp(strFrom, "celcius") == 0 && strcmp(strTo, "kelvin") == 0))
     {
-        scanf("%c", &ch1);
-        from[i] = ch1;
-        i++;
+        printf("Answer if in kelvin");
+        printf("%lf", val + 273.15);
     }
-
-    from[i] = '\0';
-    puts(from);
-
-    printf("enter string to: ");
-    char to[100];
-    char ch2;
-    int j = 0;
-
-    while (ch2 != '\n')
+    else if ((strcmp(strFrom, "farenheit") == 0) && (strcmp(strTo, "celcius")) == 0)
     {
-        scanf("%c", &ch2);
-        to[j] = ch2;
-        j++;
-    }
-
-    from[j] = '\0';
-    puts(to);
-
-    if ((strcmp(celcius, from) == 0) && (strcmp(farenheit, to) == 0))
-    {
-        printf("Answer is %lf Farenheint", val * (9.0 / 5) + 32);
-    }
-    else if ((strcmp(kelvin, from) == 0) && (strcmp(farenheit, to) == 0))
-    {
-        printf("f");
-    }
-    else if ((strcmp(farenheit, from) == 0) && (strcmp(celcius, to) == 0))
-    {
-        printf("c");
-    }
-    else if ((strcmp(farenheit, from) == 0) && (strcmp(kelvin, to) == 0))
-    {
-        printf("k");
-    }
-    else if ((strcmp(kelvin, from) == 0) && (strcmp(celcius, to) == 0))
-    {
-        printf("c");
-    }
-    else if ((strcmp(celcius, from) == 0) && (strcmp(kelvin, to) == 0))
-    {
-        printf("k");
-    }
-    else
-    {
-        printf("nah");
+        printf("answer is in celcius");
+        printf("somethng ometif");
     }
 
     return 0;
