@@ -67,9 +67,29 @@ int Temperature()
     {
         printf("Answer is %lf Farenheint", val * (9.0 / 5) + 32);
     }
+    else if ((strcmp(kelvin, from) == 0) && (strcmp(farenheit, to) == 0))
+    {
+        printf("f");
+    }
+    else if ((strcmp(farenheit, from) == 0) && (strcmp(celcius, to) == 0))
+    {
+        printf("c");
+    }
+    else if ((strcmp(farenheit, from) == 0) && (strcmp(kelvin, to) == 0))
+    {
+        printf("k");
+    }
+    else if ((strcmp(kelvin, from) == 0) && (strcmp(celcius, to) == 0))
+    {
+        printf("c");
+    }
+    else if ((strcmp(celcius, from) == 0) && (strcmp(kelvin, to) == 0))
+    {
+        printf("k");
+    }
     else
     {
-        printf("naahhh");
+        printf("nah");
     }
 
     return 0;
