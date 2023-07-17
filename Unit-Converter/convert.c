@@ -8,12 +8,10 @@ int Weight();
 int Volume();
 int Time();
 
-
 int main()
 {
     printf("This programme convert temperature, distance, weight, volume, time and power \n");
     printf("Enter what you want to convert: \n [PLEASE ENTER WITHOUT CAPS]: \n");
-
 
     char unit[10];
     scanf("%s", unit);
@@ -36,26 +34,72 @@ int Temperature()
     printf("[PLEASE W/O CAPS:] \n");
     scanf("%lf %s", &value, scale);
 
-    if((strcmp(scale, "celcius") == 0)){
+    if ((strcmp(scale, "celcius") == 0))
+    {
         printf("You want to convert %lf %s", value, scale);
-    } else if ((strcmp(scale, "farenheit") == 0)){
+    }
+    else if ((strcmp(scale, "farenheit") == 0))
+    {
         printf("You want to convert %lf %s", value, scale);
-    } else if ((strcmp(scale, "kelvin") == 0)){
+    }
+    else if ((strcmp(scale, "kelvin") == 0))
+    {
         printf("You want to convert %lf %s", value, scale);
-    } else if ((strcmp(scale, "delisle") == 0)){
+    }
+    else if ((strcmp(scale, "delisle") == 0))
+    {
         printf("You want to convert %lf %s", value, scale);
-    } else if ((strcmp(scale, "newton") == 0)){
+    }
+    else if ((strcmp(scale, "newton") == 0))
+    {
         printf("You want to convert %lf %s", value, scale);
-    } else if ((strcmp(scale, "rankine") == 0)){
+    }
+    else if ((strcmp(scale, "rankine") == 0))
+    {
         printf("You want to convert %lf %s", value, scale);
-    } else if ((strcmp(scale, "reamur") == 0)){
+    }
+    else if ((strcmp(scale, "reamur") == 0))
+    {
         printf("You want to convert %lf %s", value, scale);
-    } else if ((strcmp(scale, "romer") == 0)){
+    }
+    else if ((strcmp(scale, "romer") == 0))
+    {
         printf("You want to convert %lf %s", value, scale);
+    } else {
+        
     }
 }
 
+int Distance()
+{
+    float millimeter, centimeter;
+    float kilometer, meter;
 
-int Distance(){
-    
+    double value;
+    char scale[20];
+
+    printf("Enter the calue you want to convert [in the form: {number <enter> scale}] \n");
+    printf("[PLEASE W/O CAPS:] \n");
+    scanf("%lf %s", &value, scale);
+
+    if ((strcmp(scale, "celcius") == 0))
+    {
+        printf("You want to convert %lf %s", value, scale);
+    }
+    else if ((strcmp(scale, "farenheit") == 0))
+    {
+        printf("You want to convert %lf %s", value, scale);
+    }
+    else if ((strcmp(scale, "kelvin") == 0))
+    {
+        printf("You want to convert %lf %s", value, scale);
+    }
+    else if ((strcmp(scale, "delisle") == 0))
+    {
+        printf("You want to convert %lf %s", value, scale);
+    }
+    else{
+
+    }
+   
 }
