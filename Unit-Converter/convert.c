@@ -65,8 +65,9 @@ int Temperature()
     else if ((strcmp(scale, "romer") == 0))
     {
         printf("You want to convert %lf %s", value, scale);
-    } else {
-
+    }
+    else
+    {
     }
 }
 
@@ -98,8 +99,40 @@ int Distance()
     {
         printf("You want to convert %lf %s", value, scale);
     }
-    else{
-
+    else
+    {
     }
-   
+}
+
+int Weight()
+{
+    float millilitre, centilitre;
+    float kilolitre, litre;
+
+    double value;
+    char scale[20];
+
+    printf("Enter the calue you want to convert [in the form: {number <enter> scale}] \n");
+    printf("[PLEASE W/O CAPS:] \n");
+    scanf("%lf %s", &value, scale);
+
+    if ((strcmp(scale, "millilitre") == 0))
+    {
+        printf("You want to convert %lf %s", value, scale);
+    }
+    else if ((strcmp(scale, "centilitre") == 0))
+    {
+        printf("You want to convert %lf %s", value, scale);
+    }
+    else if ((strcmp(scale, "kilolitre") == 0))
+    {
+        printf("You want to convert %lf %s", value, scale);
+    }
+    else if ((strcmp(scale, "litre") == 0))
+    {
+        printf("You want to convert %lf %s", value, scale);
+    }
+    else
+    {
+    }
 }
