@@ -188,11 +188,8 @@ int Weight()
 
 int Time()
 {
-    int milliseconds, seconds, minutes, hours;
-    int days, weeks, months, years;
-
-    double val;
-    char unit;
+    float milliseconds, seconds, minutes, hours;
+    float days, weeks, months, years;
 
     double value;
     char scale[20];
@@ -204,6 +201,7 @@ int Time()
     if ((strcmp(scale, "milliseconds") == 0))
     {
         printf("You want to convert %lf %s", value, scale);
+
         seconds = value / 10;
         minutes = value / (60 * 60);
         hours = value / (60 * 60 * 60);
@@ -211,14 +209,14 @@ int Time()
         weeks = value / (60 * 60 * 60 * 24 * 7);
         months = value / (60 * 60 * 60 * 24 * 7 * 4.2);
         years = value / (60 * 60 * 60 * 24 * 7 * 4.2 * 12);
-        printf("%lf", milliseconds);
-        printf("%lf", seconds);
-        printf("%lf", minutes);
-        printf("%lf", hours);
-        printf("%lf", days);
-        printf("%lf", weeks);
-        printf("%lf", months);
-        printf("%lf", years);
+        
+        printf("%6f seconds \n", seconds);
+        printf("%6f minutes \n", minutes);
+        printf("%6f hours \n", hours);
+        printf("%6f days \n", days);
+        printf("%6f weeks \n", weeks);
+        printf("%6f months \n", months);
+        printf("%6f years \n", years);
 
     }
     else if ((strcmp(scale, "seconds") == 0))
