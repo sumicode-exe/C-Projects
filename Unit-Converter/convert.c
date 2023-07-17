@@ -73,8 +73,8 @@ int Temperature()
 
 int Distance()
 {
-    float millimeter, centimeter;
-    float kilometer, meter;
+    float millimeters, centimeters;
+    float kilometers, meters;
 
     double value;
     char scale[20];
@@ -83,19 +83,19 @@ int Distance()
     printf("[PLEASE W/O CAPS:] \n");
     scanf("%lf %s", &value, scale);
 
-    if ((strcmp(scale, "millieter") == 0))
+    if ((strcmp(scale, "millieters") == 0))
     {
         printf("You want to convert %lf %s", value, scale);
     }
-    else if ((strcmp(scale, "centimeter") == 0))
+    else if ((strcmp(scale, "centimeters") == 0))
     {
         printf("You want to convert %lf %s", value, scale);
     }
-    else if ((strcmp(scale, "kilometer") == 0))
+    else if ((strcmp(scale, "kilometers") == 0))
     {
         printf("You want to convert %lf %s", value, scale);
     }
-    else if ((strcmp(scale, "meter") == 0))
+    else if ((strcmp(scale, "meters") == 0))
     {
         printf("You want to convert %lf %s", value, scale);
     }
@@ -106,8 +106,8 @@ int Distance()
 
 int Volume()
 {
-    float millilitre, centilitre;
-    float kilolitre, litre;
+    float millilitres, centilitres;
+    float kilolitres, litres;
 
     double value;
     char scale[20];
@@ -116,11 +116,11 @@ int Volume()
     printf("[PLEASE W/O CAPS:] \n");
     scanf("%lf %s", &value, scale);
 
-    if ((strcmp(scale, "millilitre") == 0))
+    if ((strcmp(scale, "millilitres") == 0))
     {
         printf("You want to convert %lf %s", value, scale);
     }
-    else if ((strcmp(scale, "centilitre") == 0))
+    else if ((strcmp(scale, "centilitres") == 0))
     {
         printf("You want to convert %lf %s", value, scale);
     }
