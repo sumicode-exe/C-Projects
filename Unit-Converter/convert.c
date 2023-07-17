@@ -66,7 +66,7 @@ int Temperature()
     {
         printf("You want to convert %lf %s", value, scale);
     } else {
-        
+
     }
 }
 
@@ -82,19 +82,19 @@ int Distance()
     printf("[PLEASE W/O CAPS:] \n");
     scanf("%lf %s", &value, scale);
 
-    if ((strcmp(scale, "celcius") == 0))
+    if ((strcmp(scale, "millieter") == 0))
     {
         printf("You want to convert %lf %s", value, scale);
     }
-    else if ((strcmp(scale, "farenheit") == 0))
+    else if ((strcmp(scale, "centimeter") == 0))
     {
         printf("You want to convert %lf %s", value, scale);
     }
-    else if ((strcmp(scale, "kelvin") == 0))
+    else if ((strcmp(scale, "kilometer") == 0))
     {
         printf("You want to convert %lf %s", value, scale);
     }
-    else if ((strcmp(scale, "delisle") == 0))
+    else if ((strcmp(scale, "meter") == 0))
     {
         printf("You want to convert %lf %s", value, scale);
     }
