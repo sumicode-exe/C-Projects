@@ -8,8 +8,8 @@ int main()
 {
     printf("Enter what you want to convert:");
 
-    char unit;
-    scnaf("%s", unit);
+    char unit[10];
+    scanf("%s", unit);
 
     if ((strcmp(unit, "temperature") == 0))
     {
@@ -23,12 +23,12 @@ int Temperature()
     float Newton, Rankine, Reamur, Romer;
 
     double value;
-    char scale;
+    char scale[20];
 
     printf("Enter the calue you want to convert [in the form: {number <enter> scale}]");
     scanf("%lf %s", &value, scale);
 
-    if((strcmp(scale, "Celcius") == 0)){
+    if((strcmp(scale, "celcius") == 0)){
         printf("You want to convert %lf %s", value, scale);
     }
 }
