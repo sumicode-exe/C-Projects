@@ -124,11 +124,11 @@ int Volume()
     {
         printf("You want to convert %lf %s", value, scale);
     }
-    else if ((strcmp(scale, "kilolitre") == 0))
+    else if ((strcmp(scale, "kilolitres") == 0))
     {
         printf("You want to convert %lf %s", value, scale);
     }
-    else if ((strcmp(scale, "litre") == 0))
+    else if ((strcmp(scale, "litres") == 0))
     {
         printf("You want to convert %lf %s", value, scale);
     }
@@ -140,8 +140,8 @@ int Volume()
 
 int Weight()
 {
-    float milligram, centigram;
-    float kilogram, gram;
+    float milligrams, centigrams;
+    float kilograms, grams;
 
     double value;
     char scale[20];
@@ -150,23 +150,29 @@ int Weight()
     printf("[PLEASE W/O CAPS:] \n");
     scanf("%lf %s", &value, scale);
 
-    if ((strcmp(scale, "milligram") == 0))
+    if ((strcmp(scale, "milligrams") == 0))
     {
         printf("You want to convert %lf %s", value, scale);
     }
-    else if ((strcmp(scale, "centigram") == 0))
+    else if ((strcmp(scale, "centigrams") == 0))
     {
         printf("You want to convert %lf %s", value, scale);
     }
-    else if ((strcmp(scale, "kilogram") == 0))
+    else if ((strcmp(scale, "kilograms") == 0))
     {
         printf("You want to convert %lf %s", value, scale);
     }
-    else if ((strcmp(scale, "gram") == 0))
+    else if ((strcmp(scale, "grams") == 0))
     {
         printf("You want to convert %lf %s", value, scale);
     }
     else
     {
     }
+}
+
+
+int Time(){
+    int milliseconds, seconds, minutes, hours;
+    int days, weeks, months, years;
 }
