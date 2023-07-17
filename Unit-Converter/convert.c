@@ -3,11 +3,16 @@
 #include <string.h>
 
 int Temperature();
+int Distance();
+int Weight();
+int Volume();
+int Time();
+
 
 int main()
 {
-    printf("This programme convert temperature, distance, weight, volume, time and power");
-    printf("Enter what you want to convert: \t [PLEASE ENTER WITHOUT CAPS]");
+    printf("This programme convert temperature, distance, weight, volume, time and power \n");
+    printf("Enter what you want to convert: \n [PLEASE ENTER WITHOUT CAPS]: \n");
 
 
     char unit[10];
@@ -27,7 +32,8 @@ int Temperature()
     double value;
     char scale[20];
 
-    printf("Enter the calue you want to convert [in the form: {number <enter> scale}]");
+    printf("Enter the calue you want to convert [in the form: {number <enter> scale}] \n");
+    printf("[PLEASE W/O CAPS:] \n");
     scanf("%lf %s", &value, scale);
 
     if((strcmp(scale, "celcius") == 0)){
@@ -47,4 +53,9 @@ int Temperature()
     } else if ((strcmp(scale, "romer") == 0)){
         printf("You want to convert %lf %s", value, scale);
     }
+}
+
+
+int Distance(){
+    
 }
