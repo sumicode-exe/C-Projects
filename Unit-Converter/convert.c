@@ -6,7 +6,9 @@ int Temperature();
 
 int main()
 {
-    printf("Enter what you want to convert:");
+    printf("This programme convert temperature, distance, weight, volume, time and power");
+    printf("Enter what you want to convert: \t [PLEASE ENTER WITHOUT CAPS]");
+
 
     char unit[10];
     scanf("%s", unit);
@@ -29,6 +31,20 @@ int Temperature()
     scanf("%lf %s", &value, scale);
 
     if((strcmp(scale, "celcius") == 0)){
+        printf("You want to convert %lf %s", value, scale);
+    } else if ((strcmp(scale, "farenheit") == 0)){
+        printf("You want to convert %lf %s", value, scale);
+    } else if ((strcmp(scale, "kelvin") == 0)){
+        printf("You want to convert %lf %s", value, scale);
+    } else if ((strcmp(scale, "delisle") == 0)){
+        printf("You want to convert %lf %s", value, scale);
+    } else if ((strcmp(scale, "newton") == 0)){
+        printf("You want to convert %lf %s", value, scale);
+    } else if ((strcmp(scale, "rankine") == 0)){
+        printf("You want to convert %lf %s", value, scale);
+    } else if ((strcmp(scale, "reamur") == 0)){
+        printf("You want to convert %lf %s", value, scale);
+    } else if ((strcmp(scale, "romer") == 0)){
         printf("You want to convert %lf %s", value, scale);
     }
 }
