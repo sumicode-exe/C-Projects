@@ -209,7 +209,7 @@ int Time()
         weeks = value / (60 * 60 * 60 * 24 * 7);
         months = value / (60 * 60 * 60 * 24 * 7 * 4.2);
         years = value / (60 * 60 * 60 * 24 * 7 * 4.2 * 12);
-        
+
         printf("%6f seconds \n", seconds);
         printf("%6f minutes \n", minutes);
         printf("%6f hours \n", hours);
@@ -217,11 +217,26 @@ int Time()
         printf("%6f weeks \n", weeks);
         printf("%6f months \n", months);
         printf("%6f years \n", years);
-
     }
     else if ((strcmp(scale, "seconds") == 0))
     {
         printf("You want to convert %lf %s", value, scale);
+        
+        seconds = value / 10;
+        minutes = value / (60 * 60);
+        hours = value / (60 * 60 * 60);
+        days = value / (60 * 60 * 60 * 24);
+        weeks = value / (60 * 60 * 60 * 24 * 7);
+        months = value / (60 * 60 * 60 * 24 * 7 * 4.2);
+        years = value / (60 * 60 * 60 * 24 * 7 * 4.2 * 12);
+
+        printf("%6f seconds \n", seconds);
+        printf("%6f minutes \n", minutes);
+        printf("%6f hours \n", hours);
+        printf("%6f days \n", days);
+        printf("%6f weeks \n", weeks);
+        printf("%6f months \n", months);
+        printf("%6f years \n", years);
     }
     else if ((strcmp(scale, "minutes") == 0))
     {
