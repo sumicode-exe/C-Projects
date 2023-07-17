@@ -184,4 +184,40 @@ int Time()
     printf("Enter the calue you want to convert [in the form: {number <enter> scale}] \n");
     printf("[PLEASE W/O CAPS:] \n");
     scanf("%lf %s", &value, scale);
+
+    if ((strcmp(scale, "milliseconds") == 0))
+    {
+        printf("You want to convert %lf %s", value, scale);
+    }
+    else if ((strcmp(scale, "seconds") == 0))
+    {
+        printf("You want to convert %lf %s", value, scale);
+    }
+    else if ((strcmp(scale, "minutes") == 0))
+    {
+        printf("You want to convert %lf %s", value, scale);
+    }
+    else if ((strcmp(scale, "hours") == 0))
+    {
+        printf("You want to convert %lf %s", value, scale);
+    }
+    else if ((strcmp(scale, "days") == 0))
+    {
+        printf("You want to convert %lf %s", value, scale);
+    }
+    else if ((strcmp(scale, "weeks") == 0))
+    {
+        printf("You want to convert %lf %s", value, scale);
+    }
+    else if ((strcmp(scale, "months") == 0))
+    {
+        printf("You want to convert %lf %s", value, scale);
+    }
+    else if ((strcmp(scale, "years") == 0))
+    {
+        printf("You want to convert %lf %s", value, scale);
+    }
+    else
+    {
+    }
 }
