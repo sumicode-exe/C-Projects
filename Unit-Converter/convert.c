@@ -175,4 +175,9 @@ int Weight()
 int Time(){
     int milliseconds, seconds, minutes, hours;
     int days, weeks, months, years;
+
+    double val;
+    char unit;
+
+    
 }
