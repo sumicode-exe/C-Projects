@@ -20,6 +20,22 @@ int main()
     {
         Temperature();
     }
+    else if ((strcmp(unit, "distance") == 0))
+    {
+        Distance();
+    }
+    else if ((strcmp(unit, "weight") == 0))
+    {
+        Weight();
+    }
+    else if ((strcmp(unit, "volume") == 0))
+    {
+        Volume();
+    }
+    else if ((strcmp(unit, "time") == 0))
+    {
+        Time();
+    }
 }
 
 int Temperature()
@@ -195,6 +211,15 @@ int Time()
         weeks = value / (60 * 60 * 60 * 24 * 7);
         months = value / (60 * 60 * 60 * 24 * 7 * 4.2);
         years = value / (60 * 60 * 60 * 24 * 7 * 4.2 * 12);
+        printf("%lf", milliseconds);
+        printf("%lf", seconds);
+        printf("%lf", minutes);
+        printf("%lf", hours);
+        printf("%lf", days);
+        printf("%lf", weeks);
+        printf("%lf", months);
+        printf("%lf", years);
+
     }
     else if ((strcmp(scale, "seconds") == 0))
     {
