@@ -12,7 +12,7 @@ int Power();
 int main()
 {
     printf("This calculator converts units: \n");
-    printf("of Temperature -    Celcius(C)      \t Farhenheit(F) \t Kelvin(k)\n");
+    printf("of Temperature -    Celcius(C)      \t Farhenheit(F) \t Kelvin(k)  \t Rankine \t Delisle \t Romer \t Rankine \t Newton");
     printf("of Distance    -    CentiMeter(cm)  \t MilliMeter(mm)\t KiloMeter(km)\n");
     printf("of Volume      -    Litre(l)        \t MilliLitre(ml)\t KiloLitre(kl)\n");
     printf("of Time        -    MilliSeconds(ms)\t Seconds(sec)  \t Minutes(min)\t Hours(hrs)\n");
