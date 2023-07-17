@@ -137,7 +137,6 @@ int Volume()
     }
 }
 
-
 int Weight()
 {
     float milligrams, centigrams;
@@ -171,13 +170,18 @@ int Weight()
     }
 }
 
-
-int Time(){
+int Time()
+{
     int milliseconds, seconds, minutes, hours;
     int days, weeks, months, years;
 
     double val;
     char unit;
 
-    
+    double value;
+    char scale[20];
+
+    printf("Enter the calue you want to convert [in the form: {number <enter> scale}] \n");
+    printf("[PLEASE W/O CAPS:] \n");
+    scanf("%lf %s", &value, scale);
 }
