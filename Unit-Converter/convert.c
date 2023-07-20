@@ -2,6 +2,12 @@
 #include <math.h>
 #include <string.h>
 
+#include "temperature.h"
+#include "distance.h"
+#include "time.h"
+#include "volume.h"
+#include "weight.h"
+
 int Temperature();
 int Distance();
 int Volume();
