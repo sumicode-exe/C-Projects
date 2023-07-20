@@ -58,13 +58,14 @@ int Temperature()
     if ((strcmp(scale, "celcius") == 0))
     {
         printf("You want to convert %lf %s", value, scale);
-        printf("%6f seconds \n", seconds);
-        printf("%6f minutes \n", minutes);
-        printf("%6f hours \n", hours);
-        printf("%6f days \n", days);
-        printf("%6f weeks \n", weeks);
-        printf("%6f months \n", months);
-        printf("%6f years \n", years);
+
+        printf("%6f seconds \n", Kelvin);
+        printf("%6f minutes \n", Farenheit);
+        printf("%6f hours \n", Delisle);
+        printf("%6f days \n", Newton);
+        printf("%6f weeks \n", Rankine);
+        printf("%6f months \n", Reamur);
+        printf("%6f years \n", Romer);
     }
     else if ((strcmp(scale, "farenheit") == 0))
     {
