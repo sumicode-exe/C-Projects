@@ -2,11 +2,15 @@
 #include <math.h>
 #include <string.h>
 
+
+
 int Temperature();
 int Distance();
-int Weight();
 int Volume();
+int Weight();
 int Time();
+
+
 
 int main()
 {
@@ -37,6 +41,8 @@ int main()
         Time();
     }
 }
+
+
 
 int Temperature()
 {
@@ -87,6 +93,8 @@ int Temperature()
     }
 }
 
+
+
 int Distance()
 {
     float millimeters, centimeters;
@@ -119,6 +127,8 @@ int Distance()
     {
     }
 }
+
+
 
 int Volume()
 {
@@ -153,6 +163,8 @@ int Volume()
     }
 }
 
+
+
 int Weight()
 {
     float milligrams, centigrams;
@@ -185,6 +197,8 @@ int Weight()
     {
     }
 }
+
+
 
 int Time()
 {
