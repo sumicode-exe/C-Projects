@@ -322,7 +322,7 @@ int Time()
         // weeks = value / (60 * 60 * 60 * 24 * 7);
         // months = value / (60 * 60 * 60 * 24 * 7 * 4.2);
         // years = value / (60 * 60 * 60 * 24 * 7 * 4.2 * 12);
-        
+
         printf("%6f milliseconds \n", milliseconds);
         printf("%6f seconds \n", seconds);
         printf("%6f minutes \n", minutes);
@@ -343,12 +343,12 @@ int Time()
         // months = value / (60 * 60 * 60 * 24 * 7 * 4.2);
         // years = value / (60 * 60 * 60 * 24 * 7 * 4.2 * 12);
 
+        printf("%6f milliseconds \n", milliseconds);
         printf("%6f seconds \n", seconds);
         printf("%6f minutes \n", minutes);
         printf("%6f hours \n", hours);
         printf("%6f days \n", days);
         printf("%6f weeks \n", weeks);
-        printf("%6f months \n", months);
         printf("%6f years \n", years);
     }
     else if ((strcmp(scale, "years") == 0))
