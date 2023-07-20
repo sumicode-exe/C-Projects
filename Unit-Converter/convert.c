@@ -2,15 +2,11 @@
 #include <math.h>
 #include <string.h>
 
-
-
 int Temperature();
 int Distance();
 int Volume();
 int Weight();
 int Time();
-
-
 
 int main()
 {
@@ -40,9 +36,12 @@ int main()
     {
         Time();
     }
+    else
+    {
+        printf("Please enter a valid scale of Conversion \n");
+        printf("Check the spelling and make sure to write in all small");
+    }
 }
-
-
 
 int Temperature()
 {
@@ -90,10 +89,10 @@ int Temperature()
     }
     else
     {
+        printf("Please enter a valid scale of Conversion \n");
+        printf("Check the spelling and make sure to write in all small");
     }
 }
-
-
 
 int Distance()
 {
@@ -125,10 +124,10 @@ int Distance()
     }
     else
     {
+        printf("Please enter a valid scale of Conversion \n");
+        printf("Check the spelling and make sure to write in all small");
     }
 }
-
-
 
 int Volume()
 {
@@ -160,10 +159,10 @@ int Volume()
     }
     else
     {
+        printf("Please enter a valid scale of Conversion \n");
+        printf("Check the spelling and make sure to write in all small");
     }
 }
-
-
 
 int Weight()
 {
@@ -195,10 +194,10 @@ int Weight()
     }
     else
     {
+        printf("Please enter a valid scale of Conversion \n");
+        printf("Check the spelling and make sure to write in all small");
     }
 }
-
-
 
 int Time()
 {
@@ -374,5 +373,7 @@ int Time()
     }
     else
     {
+        printf("Please enter a valid scale of Conversion \n");
+        printf("Check the spelling and make sure to write in all small");
     }
 }
