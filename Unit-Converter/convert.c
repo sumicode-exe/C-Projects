@@ -353,15 +353,15 @@ int Time()
     }
     else if ((strcmp(scale, "years") == 0))
     {
-        printf("You want to convert %lf %s", value, scale);
+        // printf("You want to convert %lf %s", value, scale);
 
-        seconds = value / 10;
-        minutes = value / (60 * 60);
-        hours = value / (60 * 60 * 60);
-        days = value / (60 * 60 * 60 * 24);
-        weeks = value / (60 * 60 * 60 * 24 * 7);
-        months = value / (60 * 60 * 60 * 24 * 7 * 4.2);
-        years = value / (60 * 60 * 60 * 24 * 7 * 4.2 * 12);
+        // seconds = value / 10;
+        // minutes = value / (60 * 60);
+        // hours = value / (60 * 60 * 60);
+        // days = value / (60 * 60 * 60 * 24);
+        // weeks = value / (60 * 60 * 60 * 24 * 7);
+        // months = value / (60 * 60 * 60 * 24 * 7 * 4.2);
+        // years = value / (60 * 60 * 60 * 24 * 7 * 4.2 * 12);
 
         printf("%6f seconds \n", seconds);
         printf("%6f minutes \n", minutes);
