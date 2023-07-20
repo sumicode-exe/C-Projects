@@ -285,7 +285,7 @@ int Time()
 
         printf("%6f milliseconds \n", milliseconds);
         printf("%6f seconds \n", seconds);
-        printf("%6f hours \n", hours);
+        printf("%6f minutes \n", minutes);
         printf("%6f days \n", days);
         printf("%6f weeks \n", weeks);
         printf("%6f months \n", months);
