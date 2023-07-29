@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-
 int main()
 {
     int arr[20];
@@ -10,16 +9,13 @@ int main()
     scanf("%d", &n);
     printf("%d", n);
     int hcf = 1;
-
     printf("Enter the numbers: ");
     for (int i = 0; i <= n - 1; i++)
     {
         scanf("%d", &arr[i]);
     }
-
     int smallest = arr[0];
     // printf("greatest %d", greatest);
-
     for (int i = 0; i <= n - 1; i++)
     {
         if (arr[i] < smallest)
@@ -27,9 +23,7 @@ int main()
             smallest = arr[i];
         }
     }
-
     printf("Smallest number is:  %d", smallest);
-
     for (int i = 1; i <= smallest; i++)
     {
         int cf = 1;
@@ -47,7 +41,6 @@ int main()
             }
         }
     }
-
     printf("HCF is %d", hcf);
     return 0;
 }
